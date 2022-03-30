@@ -3,6 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">SHORT TITLE HERE</a></li>
+        <li><a href="./">Weather App Project</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://tech-academy.io/" target="blank">&copy 2022 TechAcademy e.V.</a></li>
+      download: ["pdf"]

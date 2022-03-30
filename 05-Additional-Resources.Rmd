@@ -1,0 +1,7 @@
+# Additional Resources
+
+## Git and Github
+## JSON
+## Font Awesome
+## Frameworks and React.js
+## Node.js
