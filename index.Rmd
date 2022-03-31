@@ -17,6 +17,6 @@ In your project, you can work in groups of up to four team members. You can choo
 Every semester, the Product Development Team at TechAcademy thinks hard about a new project that is suited for you to get into web-development.
 This semester we decided to let you create a weather-app. You've seen them countless times on various websites and may use your favourite one every day to check if you have to put on a raincoat or sunscreen. But how does the data get to the website? How does it update with every refresh and how can one make look that all appealing to an audience? These are all questions that we will tackle in this semester. We hope you are as hyped up about that as we are!  
 
-The model weather-app that you will see later on in the course and this associated project guide was developed and written entirely from scratch by [Sebastian Hönig](https://www.linkedin.com/in/sebastian-hönig/) and Burkan NACHNAME from TechAcademy’s Web Development Team.
+The model weather-app that you will see later on in the course and this associated project guide was developed and written entirely from scratch by [Sebastian Hönig](https://www.linkedin.com/in/sebastian-hönig/) and [Burak Onat](https://www.linkedin.com/in/tburakonat/) from TechAcademy’s Web Development Team.
 
 
