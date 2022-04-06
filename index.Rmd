@@ -5,7 +5,7 @@ date: "Summer Term 2022"
 site: bookdown::bookdown_site
 ---
 
-# Welcome!
+# Introduction
 You've just gotten accepted into our web-development program for the summer term of 2022 and want to know what's it all about actually? Maybe you signed up, because of our awesome marketing's team TikTok campaign, or you may already have an app idea in your head. Whatever the reason may be, we can assure you of one thing: If you follow through with the semester, you will have gained an awesome skill to have and a solid foundation for further programming adventures. We will help and guide you along the way to the best of our abilities and hope we can share some of that fascination that got us into programming with you!  
 
 Learning to code is incredibly rewarding but can also be difficult and frustrating. Like any skill worth knowing, it takes time to acquire, and it can’t be learned in a weekend or even a month. With that said, anyone can learn how to program as long as they are willing to put in the time and effort.

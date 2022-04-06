@@ -1,3 +1,45 @@
-# Introduction
+# What's web development?
+In short, web developers build and maintain websites.    
+Web developers often work for clients who are trying to get their product or service onto the web. The work is typically very project focused and involves collaborating with a team that helps to coordinate the client’s needs into the end product. The work could involve front-end, back-end, or full-stack web development.  
+In our course we will focus on front end development. The front end is what you see when you open any website in your browser. At as basic level, front-end developers use HTML, CSS and JavaScript.
 
-## What's web development?
+## HTML
+
+HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.  
+The structure of a html file is very simple. Almost all elements are just pieces of content wrapped in opening and closing HTML tags. For example, you would write the title of a webpage like so: 
+```{html}
+<title>Document</title>  
+```
+And while the current version of HTML (HTML5) [140 different tags](https://www.w3schools.com/TAGS/default.ASP) contains, most webpages are made just out of a fraction of these. You've already seen the title tag, let's quicky take a look at some more of those, as these are also the ones that you will most likely be using during your project.  
+- ```<html>```: Must enclose the entire rest of the code  
+- ```<head>```: Contains the title, the link to the css (styling) file and various other information  
+- ```<body>```: Contains the contents of a website  
+- ```<p>```: Paragraph, simple text belongs here  
+- ```<hX>```: X is a number between 1 (large heading) and 6 (small heading)   
+- ```<div>```: Structure that groups content inside  
+- ```<ul>```: Unordered list containint list items ```<li>```    
+- ```<a>```: Link tag, used to link from one website to the next   
+- ```<img>```: An image in an HTML page   
+- ```<form>```: To create an HTML form for user input    
+- ```<table>```: Defines a table, containing rows ```<tr>``` and columns ```<td>```  
+- ```<button>```: Create a clickable button 
+
+Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+  </body>
+</html>
+```
+All of the content, that appears on a webpage is written between the ```<body>``` tags.
+
+## CSS
+
+Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.
+
+## JavaScript

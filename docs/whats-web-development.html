@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Weather App Project SoSe22</title>
-  <meta name="description" content="Weather App Project SoSe22" />
+  <title>Chapter 2 What’s web development? | Weather App Project SoSe22</title>
+  <meta name="description" content="Chapter 2 What’s web development? | Weather App Project SoSe22" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Weather App Project SoSe22" />
+  <meta property="og:title" content="Chapter 2 What’s web development? | Weather App Project SoSe22" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Weather App Project SoSe22" />
+  <meta name="twitter:title" content="Chapter 2 What’s web development? | Weather App Project SoSe22" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="whats-web-development.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="tools.html"/>
 <script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,29 +178,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Weather App Project SoSe22</h1>
-<p class="author"><em>TechAcademy e.V.</em></p>
-<p class="date"><em>Summer Term 2022</em></p>
+<div id="whats-web-development" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 2</span> What’s web development?<a href="whats-web-development.html#whats-web-development" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In short, web developers build and maintain websites.<br />
+Web developers often work for clients who are trying to get their product or service onto the web. The work is typically very project focused and involves collaborating with a team that helps to coordinate the client’s needs into the end product. The work could involve front-end, back-end, or full-stack web development.<br />
+In our course we will focus on front end development. The front end is what you see when you open any website in your browser. At as basic level, front-end developers use HTML, CSS and JavaScript.</p>
+<div id="html" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> HTML<a href="whats-web-development.html#html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.<br />
+The structure of a html file is very simple. Almost all elements are just pieces of content wrapped in opening and closing HTML tags. For example, you would write the title of a webpage like so:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="whats-web-development.html#cb1-1"></a><span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span>  </span></code></pre></div>
+<p>And while the current version of HTML (HTML5) <a href="https://www.w3schools.com/TAGS/default.ASP">140 different tags</a> contains, most webpages are made just out of a fraction of these. You’ve already seen the title tag, let’s quicky take a look at some more of those, as these are also the ones that you will most likely be using during your project.<br />
+- <code>&lt;html&gt;</code>: Must enclose the entire rest of the code<br />
+- <code>&lt;head&gt;</code>: Contains the title, the link to the css (styling) file and various other information<br />
+- <code>&lt;body&gt;</code>: Contains the contents of a website<br />
+- <code>&lt;p&gt;</code>: Paragraph, simple text belongs here<br />
+- <code>&lt;hX&gt;</code>: X is a number between 1 (large heading) and 6 (small heading)<br />
+- <code>&lt;div&gt;</code>: Structure that groups content inside<br />
+- <code>&lt;ul&gt;</code>: Unordered list containint list items <code>&lt;li&gt;</code><br />
+- <code>&lt;a&gt;</code>: Link tag, used to link from one website to the next<br />
+- <code>&lt;img&gt;</code>: An image in an HTML page<br />
+- <code>&lt;form&gt;</code>: To create an HTML form for user input<br />
+- <code>&lt;table&gt;</code>: Defines a table, containing rows <code>&lt;tr&gt;</code> and columns <code>&lt;td&gt;</code><br />
+- <code>&lt;button&gt;</code>: Create a clickable button</p>
+<p>Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don’t have to type it all out everytime you create a new file):</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>All of the content, that appears on a webpage is written between the <code>&lt;body&gt;</code> tags.</p>
 </div>
-<div id="introduction" class="section level1 hasAnchor">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You’ve just gotten accepted into our web-development program for the summer term of 2022 and want to know what’s it all about actually? Maybe you signed up, because of our awesome marketing’s team TikTok campaign, or you may already have an app idea in your head. Whatever the reason may be, we can assure you of one thing: If you follow through with the semester, you will have gained an awesome skill to have and a solid foundation for further programming adventures. We will help and guide you along the way to the best of our abilities and hope we can share some of that fascination that got us into programming with you!</p>
-<p>Learning to code is incredibly rewarding but can also be difficult and frustrating. Like any skill worth knowing, it takes time to acquire, and it can’t be learned in a weekend or even a month. With that said, anyone can learn how to program as long as they are willing to put in the time and effort.</p>
-<p>So before we get into the meat and get our hands dirty, let’s go over how this semester is structured. Over the following months, there will be a total of four Coding Meetups, spaced out evenly where you will have the ability to meet your peers, work together on our application and ask questions to your mentors. But what about the rest of the semester? As mentioned previously any skill takes time. So you will have to do work on your own as well. For self-study purposes this guideline only serves as a rough draft. However, we have partnered up with Udemy and thus you have free access to the ultimate web-development bootcamp course. Everything you will learn there, you can later use within your own project and solidify your knowledge.</p>
-<p>In your project, you can work in groups of up to four team members. You can choose your teammates independently and we will not interfere with your arrangements. It is however beneficial, that all group members have approximately the same level of knowledge. We explicitly encourage you to collaborate with students from different university faculties. This not only allows you to get to know people from other faculties, but may also give you a whole new perspective on the project and tasks. When submitting your project please note: for a certificate, each person must submit the project individually. However, hand-ins may be similar within your group. You can get more information at our first Coding Meetup on <strong>May 18, 2022.</strong></p>
-<p>Every semester, the Product Development Team at TechAcademy thinks hard about a new project that is suited for you to get into web-development.
-This semester we decided to let you create a weather-app. You’ve seen them countless times on various websites and may use your favourite one every day to check if you have to put on a raincoat or sunscreen. But how does the data get to the website? How does it update with every refresh and how can one make look that all appealing to an audience? These are all questions that we will tackle in this semester. We hope you are as hyped up about that as we are!</p>
-<p>The model weather-app that you will see later on in the course and this associated project guide was developed and written entirely from scratch by <a href="https://www.linkedin.com/in/sebastian-hönig/">Sebastian Hönig</a> and <a href="https://www.linkedin.com/in/tburakonat/">Burak Onat</a> from TechAcademy’s Web Development Team.</p>
+<div id="css" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.2</span> CSS<a href="whats-web-development.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.</p>
+</div>
+<div id="javascript" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.3</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="whats-web-development.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
