@@ -40,6 +40,32 @@ All of the content, that appears on a webpage is written between the ```<body>``
 
 ## CSS
 
-Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.
+Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
+The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.
+```
+.bold-text {
+  font-weight: bold;
+  color: red;
+  background-color: blue;
+}
+```  
+Once again, let's go over the properties that you will encounter most often in the following months.  
+- ```width```: specifies the width of the element's content area  
+- ```height```: specifies the height of the element's content area  
+- ```color```: defines the color of text, can be named, rgb(a) or hex value  
+- ```background-color```: sets the background color  
+- ```border```: specifies what kind of border to display     
+- ```outline```: similar to border, but within the elements "box"  
+- ```font-size```: Sets size of font (small, large..)  
+- ```font-weight```: Sets weight of font (bold, italic..)   
+- ```font-family```: Sets font style (arial, times...)   
+- ```margin```: distance from the border of one element to the border of the other element    
+- ```padding```:  distance from border to the content of the element  
+
+CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin. 
+PICTURE  
+This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.
+
+
 
 ## JavaScript

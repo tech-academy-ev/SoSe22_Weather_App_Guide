@@ -215,7 +215,28 @@ The structure of a html file is very simple. Almost all elements are just pieces
 </div>
 <div id="css" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.2</span> CSS<a href="whats-web-development.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.</p>
+<p>Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.<br />
+The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.</p>
+<pre><code>.bold-text {
+  font-weight: bold;
+  color: red;
+  background-color: blue;
+}</code></pre>
+<p>Once again, let’s go over the properties that you will encounter most often in the following months.<br />
+- <code>width</code>: specifies the width of the element’s content area<br />
+- <code>height</code>: specifies the height of the element’s content area<br />
+- <code>color</code>: defines the color of text, can be named, rgb(a) or hex value<br />
+- <code>background-color</code>: sets the background color<br />
+- <code>border</code>: specifies what kind of border to display<br />
+- <code>outline</code>: similar to border, but within the elements “box”<br />
+- <code>font-size</code>: Sets size of font (small, large..)<br />
+- <code>font-weight</code>: Sets weight of font (bold, italic..)<br />
+- <code>font-family</code>: Sets font style (arial, times…)<br />
+- <code>margin</code>: distance from the border of one element to the border of the other element<br />
+- <code>padding</code>: distance from border to the content of the element</p>
+<p>CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.
+PICTURE<br />
+This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.</p>
 </div>
 <div id="javascript" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.3</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
