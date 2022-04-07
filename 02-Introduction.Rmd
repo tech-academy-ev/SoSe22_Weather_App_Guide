@@ -24,6 +24,15 @@ And while the current version of HTML (HTML5) [140 different tags](https://www.w
 - ```<table>```: Defines a table, containing rows ```<tr>``` and columns ```<td>```  
 - ```<button>```: Create a clickable button 
 
+To all of these tags you can add classes or id's. An id has to be unique. Why would we do this!? We will get to that once we learn about CSS.     
+```{html}
+<div class="small-text">
+  <p id="first-line">Name</p>
+  <p id="second-line">Tom</p>
+</div>
+```
+...or id's with
+
 Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
 ```{html}
 <!DOCTYPE html>
@@ -44,8 +53,11 @@ So.. we know the basic structure and some HTML tags, but how and where do we wri
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
 The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.  
   
-  
+<center>
+
 ![](assets/css_example.png)
+
+</center>
   
 Let's go over how selectors work so you can get a feel for fit. If the goal is to style all elements of the same type in a certain way, simply reference the tag.  
 ```{css}
@@ -84,8 +96,11 @@ Now, let's check out the properties that you will encounter most often.
 
 CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.   
   
-  
+<center>
+
 ![](assets/box-model.png)
+
+</center>
   
 This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.  
   
