@@ -25,7 +25,7 @@ And while the current version of HTML (HTML5) [140 different tags](https://www.w
 - ```<button>```: Create a clickable button 
 
 Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
-```
+```{html}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,21 +36,40 @@ Now that you know the majority of the relevant tags the only question left to an
   </body>
 </html>
 ```
-All of the content, that appears on a webpage is written between the ```<body>``` tags.
+All of the content, that appears on a webpage is written between the ```<body>``` tags.  
+So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
 
 ## CSS
 
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
-The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.
-![css](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/css_example.png)
-```
-.bold-text {
-  font-weight: bold;
-  color: red;
-  background-color: blue;
+The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.  
+  
+  
+![](assets/css_example.png)
+  
+Let's go over how selectors work so you can get a feel for fit. If the goal is to style all elements of the same type in a certain way, simply reference the tag.  
+```{css}
+h1 {
+  color: black;
 }
 ```  
-Once again, let's go over the properties that you will encounter most often in the following months.  
+If you want to style multiple elements, you use dot notation and add a class to the element in HTML.
+  
+```{css, class.source="important"}
+.bold-text {                           
+  font-weight: bold
+}
+```
+  
+If you only want to style one element, you use the hashtag notation and add an id to the element in HTML.
+```{css, class.source="important"}
+#header {                           
+  font-size: x-large;
+}
+```
+  
+Now, let's check out the properties that you will encounter most often.  
+
 - ```width```: specifies the width of the element's content area  
 - ```height```: specifies the height of the element's content area  
 - ```color```: defines the color of text, can be named, rgb(a) or hex value  
@@ -63,11 +82,28 @@ Once again, let's go over the properties that you will encounter most often in t
 - ```margin```: distance from the border of one element to the border of the other element    
 - ```padding```:  distance from border to the content of the element  
 
-CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin. 
-![box-model](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/box-model.png)
+CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.   
+  
+  
+![](assets/box-model.png)
+  
 This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.  
-![dev-tools](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/ta-website.png)
+  
+  
+![](assets/ta-website.png)
 
+Great, now you know alot about CSS, but where do we actually write it? There are several way's that you'll come across, but the most common way is to create a new file, by convention often named style.css, and put all our css code there. Now we only have to link our created file in the head section of the html page and we are all set. For that to work, these files have to be in the same folder.  
 
+```{html}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>...</body>
+</html>
+```
 
 ## JavaScript

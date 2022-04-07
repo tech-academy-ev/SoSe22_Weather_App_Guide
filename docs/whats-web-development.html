@@ -202,41 +202,88 @@ The structure of a html file is very simple. Almost all elements are just pieces
 - <code>&lt;table&gt;</code>: Defines a table, containing rows <code>&lt;tr&gt;</code> and columns <code>&lt;td&gt;</code><br />
 - <code>&lt;button&gt;</code>: Create a clickable button</p>
 <p>Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don’t have to type it all out everytime you create a new file):</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<p>All of the content, that appears on a webpage is written between the <code>&lt;body&gt;</code> tags.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="whats-web-development.html#cb2-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="whats-web-development.html#cb2-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-3"><a href="whats-web-development.html#cb2-3"></a>  <span class="kw">&lt;head&gt;</span></span>
+<span id="cb2-4"><a href="whats-web-development.html#cb2-4"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb2-5"><a href="whats-web-development.html#cb2-5"></a>    <span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb2-6"><a href="whats-web-development.html#cb2-6"></a>  <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb2-7"><a href="whats-web-development.html#cb2-7"></a>  <span class="kw">&lt;body&gt;</span></span>
+<span id="cb2-8"><a href="whats-web-development.html#cb2-8"></a>  <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb2-9"><a href="whats-web-development.html#cb2-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<p>All of the content, that appears on a webpage is written between the <code>&lt;body&gt;</code> tags.<br />
+So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don’t worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.</p>
 </div>
 <div id="css" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.2</span> CSS<a href="whats-web-development.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.<br />
 The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.</p>
-<pre><code>.bold-text {
-  font-weight: bold;
-  color: red;
-  background-color: blue;
-}</code></pre>
-<p>Once again, let’s go over the properties that you will encounter most often in the following months.<br />
-- <code>width</code>: specifies the width of the element’s content area<br />
-- <code>height</code>: specifies the height of the element’s content area<br />
-- <code>color</code>: defines the color of text, can be named, rgb(a) or hex value<br />
-- <code>background-color</code>: sets the background color<br />
-- <code>border</code>: specifies what kind of border to display<br />
-- <code>outline</code>: similar to border, but within the elements “box”<br />
-- <code>font-size</code>: Sets size of font (small, large..)<br />
-- <code>font-weight</code>: Sets weight of font (bold, italic..)<br />
-- <code>font-family</code>: Sets font style (arial, times…)<br />
-- <code>margin</code>: distance from the border of one element to the border of the other element<br />
-- <code>padding</code>: distance from border to the content of the element</p>
-<p>CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.
-PICTURE<br />
-This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.</p>
+<p><img src="assets/css_example.png" /></p>
+<p>Let’s go over how selectors work so you can get a feel for fit. If the goal is to style all elements of the same type in a certain way, simply reference the tag.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="whats-web-development.html#cb3-1"></a>h1 {</span>
+<span id="cb3-2"><a href="whats-web-development.html#cb3-2"></a>  <span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="whats-web-development.html#cb3-3"></a>}</span></code></pre></div>
+<style type="text/css">
+h1 {
+  color: black;
+}
+</style>
+<p>If you want to style multiple elements, you use dot notation and add a class to the element in HTML.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode css important"><code class="sourceCode css"><span id="cb4-1"><a href="whats-web-development.html#cb4-1"></a><span class="fu">.bold-text</span> {                           </span>
+<span id="cb4-2"><a href="whats-web-development.html#cb4-2"></a>  <span class="kw">font-weight</span>: <span class="dv">bold</span></span>
+<span id="cb4-3"><a href="whats-web-development.html#cb4-3"></a>}</span></code></pre></div>
+<style type="text/css">
+.bold-text {                           
+  font-weight: bold
+}
+</style>
+<p>If you only want to style one element, you use the hashtag notation and add an id to the element in HTML.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css important"><code class="sourceCode css"><span id="cb5-1"><a href="whats-web-development.html#cb5-1"></a><span class="pp">#header</span> {                           </span>
+<span id="cb5-2"><a href="whats-web-development.html#cb5-2"></a>  <span class="kw">font-size</span>: <span class="dv">x-large</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="whats-web-development.html#cb5-3"></a>}</span></code></pre></div>
+<style type="text/css">
+#header {                           
+  font-size: x-large;
+}
+</style>
+<p>Now, let’s check out the properties that you will encounter most often.</p>
+<ul>
+<li><code>width</code>: specifies the width of the element’s content area<br />
+</li>
+<li><code>height</code>: specifies the height of the element’s content area<br />
+</li>
+<li><code>color</code>: defines the color of text, can be named, rgb(a) or hex value<br />
+</li>
+<li><code>background-color</code>: sets the background color<br />
+</li>
+<li><code>border</code>: specifies what kind of border to display<br />
+</li>
+<li><code>outline</code>: similar to border, but within the elements “box”<br />
+</li>
+<li><code>font-size</code>: Sets size of font (small, large..)<br />
+</li>
+<li><code>font-weight</code>: Sets weight of font (bold, italic..)<br />
+</li>
+<li><code>font-family</code>: Sets font style (arial, times…)<br />
+</li>
+<li><code>margin</code>: distance from the border of one element to the border of the other element<br />
+</li>
+<li><code>padding</code>: distance from border to the content of the element</li>
+</ul>
+<p>CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.</p>
+<p><img src="assets/box-model.png" /></p>
+<p>This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.</p>
+<p><img src="assets/ta-website.png" /></p>
+<p>Great, now you know alot about CSS, but where do we actually write it? There are several way’s that you’ll come across, but the most common way is to create a new file (by convention saved as style.css) and put all our css code there. Now we only have to link our created file in the head section of the html page and we are all set.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="whats-web-development.html#cb6-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="whats-web-development.html#cb6-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-3"><a href="whats-web-development.html#cb6-3"></a>  <span class="kw">&lt;head&gt;</span></span>
+<span id="cb6-4"><a href="whats-web-development.html#cb6-4"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb6-5"><a href="whats-web-development.html#cb6-5"></a>    <span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb6-6"><a href="whats-web-development.html#cb6-6"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb6-7"><a href="whats-web-development.html#cb6-7"></a>  <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb6-8"><a href="whats-web-development.html#cb6-8"></a>  <span class="kw">&lt;body&gt;</span>...<span class="kw">&lt;/body&gt;</span></span>
+<span id="cb6-9"><a href="whats-web-development.html#cb6-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
 </div>
 <div id="javascript" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.3</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
