@@ -42,7 +42,7 @@ All of the content, that appears on a webpage is written between the ```<body>``
 
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
 The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.
-![](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/css_example.png)
+![css](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/css_example.png)
 ```
 .bold-text {
   font-weight: bold;
@@ -64,9 +64,9 @@ Once again, let's go over the properties that you will encounter most often in t
 - ```padding```:  distance from border to the content of the element  
 
 CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin. 
-![](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/box-model.png)
+![box-model](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/box-model.png)
 This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.  
-![](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/ta-website.png)
+![dev-tools](https://github.com/tech-academy-ev/SoSe22_Weather_App_Guide/blob/chapter_one/imgs/ta-website.png)
 
 
 
