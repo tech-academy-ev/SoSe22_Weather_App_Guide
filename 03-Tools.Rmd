@@ -28,4 +28,14 @@ For this course and your project you can also use the online code editor [CodeSa
 
 ## API
 
+This semester the web development course will build an interactive weather application but more on the project will come later. For now let's answer the question: Where does our weather data come from? Obviously we do not keep track of the weather data. There are plenty of APIs that provide such a service. But what exactly is an API? An API (Application Programming Interface) allows programmers to get some data from somewhere else and do whatever you want to do with it. For example you could display such data on your web page. These API services are often expensive but there are some very cool APIs that allow us to do some stuff for free.
+
+### How do we get the data?
+Every API works differently but if you understand one API you probably will also understand every other API very easily. We have to write some code that asks the API what data we want? In JavaScript you can use the fetch() function to request data from somewhere.
+
+### How do we use the data?
+After you fetched the data from an API you have to change the format of the data into an JavaScript object so that you can work with those information. Some of you might ask in which form the data comes to us and that would be very good question. Most API Services use JSON (JavaScript Object Notation) to send data. You can read more about it in the additional resources part but for now you should know that it is a text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client). 
+
+For your project we recommend you to use the [OpenWeather API](https://openweathermap.org/api) which has a free tier that you can use after creating a free account. If you read their documentation page you will see many different API options you can choose from. But don't worry! Once you know how one of them works you will get the hang of it. You can start with the „Current Weather Data API Call“ and inspect the data structure. Note which data you will need and try to extract it from there. You can use a Chrome Extension called JSON Formatter to have a clear look at the data.
+
 ## Udemy
