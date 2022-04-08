@@ -79,7 +79,11 @@
 <li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools<span></span></a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="tools.html"><a href="tools.html#ide"><i class="fa fa-check"></i><b>3.1</b> IDE<span></span></a></li>
-<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.2</b> API<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.2</b> API<span></span></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="tools.html"><a href="tools.html#how-do-we-get-the-data"><i class="fa fa-check"></i><b>3.2.1</b> How do we get the data?<span></span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="tools.html"><a href="tools.html#how-do-we-use-the-data"><i class="fa fa-check"></i><b>3.2.2</b> How do we use the data?<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="tools.html"><a href="tools.html#udemy"><i class="fa fa-check"></i><b>3.3</b> Udemy<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>4</b> Project<span></span></a>
@@ -136,6 +140,16 @@ No one can avoid to write code without bugs. IDEs know that and they are always 
 </div>
 <div id="api" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> API<a href="tools.html#api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This semester the web development course will build an interactive weather application but more on the project will come later. For now let’s answer the question: Where does our weather data come from? Obviously we do not keep track of the weather data. There are plenty of APIs that provide such a service. But what exactly is an API? An API (Application Programming Interface) allows programmers to get some data from somewhere else and do whatever you want to do with it. For example you could display such data on your web page. These API services are often expensive but there are some very cool APIs that allow us to do some stuff for free.</p>
+<div id="how-do-we-get-the-data" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> How do we get the data?<a href="tools.html#how-do-we-get-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Every API works differently but if you understand one API you probably will also understand every other API very easily. We have to write some code that asks the API what data we want? In JavaScript you can use the fetch() function to request data from somewhere.</p>
+</div>
+<div id="how-do-we-use-the-data" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> How do we use the data?<a href="tools.html#how-do-we-use-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After you fetched the data from an API you have to change the format of the data into an JavaScript object so that you can work with those information. Some of you might ask in which form the data comes to us and that would be very good question. Most API Services use JSON (JavaScript Object Notation) to send data. You can read more about it in the additional resources part but for now you should know that it is a text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client).</p>
+<p>For your project we recommend you to use the <a href="https://openweathermap.org/api">OpenWeather API</a> which has a free tier that you can use after creating a free account. If you read their documentation page you will see many different API options you can choose from. But don’t worry! Once you know how one of them works you will get the hang of it. You can start with the „Current Weather Data API Call“ and inspect the data structure. Note which data you will need and try to extract it from there. You can use a Chrome Extension called JSON Formatter to have a clear look at the data.</p>
+</div>
 </div>
 <div id="udemy" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Udemy<a href="tools.html#udemy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
