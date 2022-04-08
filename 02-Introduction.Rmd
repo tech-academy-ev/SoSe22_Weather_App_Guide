@@ -31,9 +31,9 @@ To all of these tags you can add classes or id's. An id has to be unique. Why wo
   <p id="second-line">Tom</p>
 </div>
 ```
-...or id's with
-
-Now that you know the majority of the relevant tags the only question left to answer is where do we put them? For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done! The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
+  
+  
+Now that you know the majority of the relevant tags the only question left to answer is how do we actually write HTML code. For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done. The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
 ```{html}
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +48,7 @@ Now that you know the majority of the relevant tags the only question left to an
 All of the content, that appears on a webpage is written between the ```<body>``` tags.  
 So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
 
+TODO: Add a further reading seciton
 ## CSS
 
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
@@ -65,7 +66,7 @@ h1 {
   color: black;
 }
 ```  
-If you want to style multiple elements, you use dot notation and add a class to the element in HTML.
+If you want to style multiple elements, that may be of different types, you use dot-notation and add a class to the element in HTML.
   
 ```{css, class.source="important"}
 .bold-text {                           
@@ -73,7 +74,7 @@ If you want to style multiple elements, you use dot notation and add a class to 
 }
 ```
   
-If you only want to style one element, you use the hashtag notation and add an id to the element in HTML.
+If you only want to style one element, you use the hashtag-notation and add an id to the element in HTML.
 ```{css, class.source="important"}
 #header {                           
   font-size: x-large;
@@ -107,7 +108,7 @@ This schematic can also be found in every modern web browser. Simply open your f
   
 ![](assets/ta-website.png)
 
-Great, now you know alot about CSS, but where do we actually write it? There are several way's that you'll come across, but the most common way is to create a new file, by convention often named style.css, and put all our css code there. Now we only have to link our created file in the head section of the html page and we are all set. For that to work, these files have to be in the same folder.  
+Great, now you know alot about CSS, but how can we combine it with our HTML code? There are several way's that you'll come across, but the most common way is to create a new file, by convention often named style.css, and put all our css code there. Now we only have to link our created file in the head section of the html page and we are all set. For that to work, these files have to be in the same folder.  
 
 ```{html}
 <!DOCTYPE html>
@@ -121,4 +122,92 @@ Great, now you know alot about CSS, but where do we actually write it? There are
 </html>
 ```
 
+TODO: Add a further reading seciton
 ## JavaScript
+
+Let's dive in to JavaScript now! The JavaScript code that we will be writing during this semester will be run via the browser. As described in the last part on CSS, you can open the developer tools of your browser. There you’ll also find the console. You can type any JavaScript commands you like into this console, run them, and the browser will interpret the code for you. Let’s try a few examples:  
+
+<center>
+
+![](assets/console.png)
+
+</center>
+
+Now let's briefly go over the basis of JavaScript. The Udemy course will go over these concepts and lot's of additional content in more detail. Use this section as a refresher to come back to once you've gone through the course.  
+```{JavaScript}
+/* Variables */
+let a = "hello"; /* Variables are simply storage containers */
+a = "bye";       /* You use let to declare them if you expect the value to change */
+const size = 10; /* You use const if you dont expect the value to change */
+
+/* Primitive data types (boolean, string, number) */
+let isHouseEmpty = false;             /* This is a boolean value and can either be true or false */
+let ourOrganisation = "Tech Academy"; /* This is a string value */
+let participants = 95  ;              /* This is a number value */
+
+/* Compound data types (arrays, objects) */
+let myArray = [1,2,3,4,5,6,7,8,9,10];                  /* This is an array, consisting of 10 numbers, you can get the first entry like this: myArray[0] */
+let myObject = {name: "Sebastian", position: "Tutor"}; /* This is an object, to display the name you would type myObject.name */
+
+/* Console.log */
+console.log("Hello World!"); /* With console.log() we can print directly to the console. This is very handy to figure out if something's going wrong */
+
+/* If statement */
+let grade = 1.7; /* We declare a variable "grade" and store the value 1.7 in it */
+if (grade < 2.0) { /* Our code checks if grade is less than 2.0 */
+  console.log("Wow, impressive!"); /* If that's the case 'Wow, impressive!' is the output in the console */
+}
+else {
+  console.log("Don't worry!"); /* If not, 'Dont't worry!' is the output */
+}
+
+/* For loop */
+let myNumbers = [1,2,3,4,5];
+for (let number of myNumbers) {
+  console.log(number); /* Every number of myNumbers will be printed in a seperate line */
+}
+
+/* While loop */
+let a = 90;
+while (a >= 50) {
+  a -= 10;  /* Our variable a will decrement by 10 as long as a is larger than 50 */
+}
+```
+  
+Now I bet you're asking how does this all link up to HTML and CSS? The DOM, or document object, is where it all comes together. The DOM is the most important object in JavaScript - it's the JavaScript representation of the structure of our HTML and is present in the variable document, when we load the page. Through the dom we can search through the document object,
+```{JavaScript}
+const header = document.getElementById("header");
+```
+add event listeners, that specify an action everytime the element is clicked on
+```{JavaScript}
+const button = document.getElementById("login-button");
+button.addEventListener("click", () => {
+  /* check if the user's credentials were valid */
+})
+```
+and even change the style of our elements dynamically!
+```{JavaScript}
+const button = document.getElementById("login-button");
+button.style.color = "red";
+```
+  
+
+Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. Lets look at the boilerplate again.  
+```{html}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- All the HTML code comes before the script tag -->
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+  
+Great! That was a lot to take in. We recommend you to go through our outlined section of the Udemy course and come back here from time to time as a refresher and to see your progress as you will grasp more and more as time goes on. As a perfect supplement for the lessons in our Udemy course we recommend [this website](https://learnjavascript.online/) as it will allow you to practice JS hands on. After all, programming is not learned through tutorials, but by applying it yourself.
+
+TODO: Add a further reading section
+
