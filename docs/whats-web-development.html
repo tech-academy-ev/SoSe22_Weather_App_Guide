@@ -138,9 +138,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
 <li class="chapter" data-level="2" data-path="whats-web-development.html"><a href="whats-web-development.html"><i class="fa fa-check"></i><b>2</b> What’s web development?<span></span></a><ul>
-<li class="chapter" data-level="2.1" data-path="whats-web-development.html"><a href="whats-web-development.html#html"><i class="fa fa-check"></i><b>2.1</b> HTML<span></span></a></li>
-<li class="chapter" data-level="2.2" data-path="whats-web-development.html"><a href="whats-web-development.html#css"><i class="fa fa-check"></i><b>2.2</b> CSS<span></span></a></li>
-<li class="chapter" data-level="2.3" data-path="whats-web-development.html"><a href="whats-web-development.html#javascript"><i class="fa fa-check"></i><b>2.3</b> JavaScript<span></span></a></li>
+<li class="chapter" data-level="2.1" data-path="whats-web-development.html"><a href="whats-web-development.html#how-to-use-this-section"><i class="fa fa-check"></i><b>2.1</b> How to use this section<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="whats-web-development.html"><a href="whats-web-development.html#html"><i class="fa fa-check"></i><b>2.2</b> HTML<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="whats-web-development.html"><a href="whats-web-development.html#css"><i class="fa fa-check"></i><b>2.3</b> CSS<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="whats-web-development.html"><a href="whats-web-development.html#javascript"><i class="fa fa-check"></i><b>2.4</b> JavaScript<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools<span></span></a><ul>
 <li class="chapter" data-level="3.1" data-path="tools.html"><a href="tools.html#ide"><i class="fa fa-check"></i><b>3.1</b> IDE<span></span></a></li>
@@ -183,8 +184,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In short, web developers build and maintain websites.<br />
 Web developers often work for clients who are trying to get their product or service onto the web. The work is typically very project focused and involves collaborating with a team that helps to coordinate the client’s needs into the end product. The work could involve front-end, back-end, or full-stack web development.<br />
 In our course we will focus on front end development. The front end is what you see when you open any website in your browser. At as basic level, front-end developers use HTML, CSS and JavaScript.</p>
+<div id="how-to-use-this-section" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> How to use this section<a href="whats-web-development.html#how-to-use-this-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the following we will briefly introduce HTML, CSS and JavaScript. Our intention here was not to go into every little detail there is (There have been whole books written about each of these!), but to give a broad overview of the different components and how they work together. The Udemy course will go over the concepts we outlay here and lot’s of additional content in more detail. Use this section as an appetizer and/or as a refresher to come back to once you’ve gone through the course.</p>
+</div>
 <div id="html" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.1</span> HTML<a href="whats-web-development.html#html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">2.2</span> HTML<a href="whats-web-development.html#html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.<br />
 The structure of a html file is very simple. Almost all elements are just pieces of content wrapped in opening and closing HTML tags. For example, you would write the title of a webpage like so:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="whats-web-development.html#cb1-1"></a><span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span>  </span></code></pre></div>
@@ -218,10 +223,11 @@ The structure of a html file is very simple. Almost all elements are just pieces
 <span id="cb3-9"><a href="whats-web-development.html#cb3-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
 <p>All of the content, that appears on a webpage is written between the <code>&lt;body&gt;</code> tags.<br />
 So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don’t worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.</p>
-<p>TODO: Add a further reading seciton</p>
+<p>Interesting reads<br />
+- <a href="https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/">The most used HTML tags (8 million website analyzed)</a></p>
 </div>
 <div id="css" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.2</span> CSS<a href="whats-web-development.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">2.3</span> CSS<a href="whats-web-development.html#css" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.<br />
 The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.</p>
 <center>
@@ -294,15 +300,17 @@ h1 {
 <span id="cb7-7"><a href="whats-web-development.html#cb7-7"></a>  <span class="kw">&lt;/head&gt;</span></span>
 <span id="cb7-8"><a href="whats-web-development.html#cb7-8"></a>  <span class="kw">&lt;body&gt;</span>...<span class="kw">&lt;/body&gt;</span></span>
 <span id="cb7-9"><a href="whats-web-development.html#cb7-9"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
-<p>TODO: Add a further reading seciton</p>
+<p>Interesting reads:<br />
+- <a href="https://www.w3schools.com/css/css_boxmodel.asp">The Box Model - test your box model skills with exercises</a><br />
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The Box Model on MDN (check out the sidebar aswell!)</a></p>
 </div>
 <div id="javascript" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.3</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">2.4</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s dive in to JavaScript now! The JavaScript code that we will be writing during this semester will be run via the browser. As described in the last part on CSS, you can open the developer tools of your browser. There you’ll also find the console. You can type any JavaScript commands you like into this console, run them, and the browser will interpret the code for you. Let’s try a few examples:</p>
 <center>
 <p><img src="assets/console.png" /></p>
 </center>
-<p>Now let’s briefly go over the basis of JavaScript. The Udemy course will go over these concepts and lot’s of additional content in more detail. Use this section as a refresher to come back to once you’ve gone through the course.</p>
+<p>Now let’s briefly go over the basis of JavaScript.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="whats-web-development.html#cb8-1"></a><span class="co">/* Variables */</span></span>
 <span id="cb8-2"><a href="whats-web-development.html#cb8-2"></a><span class="kw">let</span> a <span class="op">=</span> <span class="st">&quot;hello&quot;</span><span class="op">;</span> <span class="co">/* Variables are simply storage containers */</span></span>
 <span id="cb8-3"><a href="whats-web-development.html#cb8-3"></a>a <span class="op">=</span> <span class="st">&quot;bye&quot;</span><span class="op">;</span>       <span class="co">/* You use let to declare them if you expect the value to change */</span></span>
@@ -350,20 +358,24 @@ h1 {
 <p>and even change the style of our elements dynamically!</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="whats-web-development.html#cb11-1"></a><span class="kw">const</span> button <span class="op">=</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;login-button&quot;</span>)<span class="op">;</span></span>
 <span id="cb11-2"><a href="whats-web-development.html#cb11-2"></a><span class="va">button</span>.<span class="va">style</span>.<span class="at">color</span> <span class="op">=</span> <span class="st">&quot;red&quot;</span><span class="op">;</span></span></code></pre></div>
-<p>Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. Lets look at the boilerplate again.</p>
+<p>Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. The updated boilerplate will look like this:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="whats-web-development.html#cb12-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
 <span id="cb12-2"><a href="whats-web-development.html#cb12-2"></a><span class="kw">&lt;html</span><span class="ot"> lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb12-3"><a href="whats-web-development.html#cb12-3"></a>  <span class="kw">&lt;head&gt;</span></span>
 <span id="cb12-4"><a href="whats-web-development.html#cb12-4"></a>    <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;UTF-8&quot;</span> <span class="kw">/&gt;</span></span>
 <span id="cb12-5"><a href="whats-web-development.html#cb12-5"></a>    <span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb12-6"><a href="whats-web-development.html#cb12-6"></a>  <span class="kw">&lt;/head&gt;</span></span>
-<span id="cb12-7"><a href="whats-web-development.html#cb12-7"></a>  <span class="kw">&lt;body&gt;</span></span>
-<span id="cb12-8"><a href="whats-web-development.html#cb12-8"></a>    <span class="co">&lt;!-- All the HTML code comes before the script tag --&gt;</span></span>
-<span id="cb12-9"><a href="whats-web-development.html#cb12-9"></a>    <span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;script.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
-<span id="cb12-10"><a href="whats-web-development.html#cb12-10"></a>  <span class="kw">&lt;/body&gt;</span></span>
-<span id="cb12-11"><a href="whats-web-development.html#cb12-11"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
-<p>Great! That was a lot to take in. We recommend you to go through our outlined section of the Udemy course and come back here from time to time as a refresher and to see your progress as you will grasp more and more as time goes on. As a perfect supplement for the lessons in our Udemy course we recommend <a href="https://learnjavascript.online/">this website</a> as it will allow you to practice JS hands on. After all, programming is not learned through tutorials, but by applying it yourself.</p>
-<p>TODO: Add a further reading section</p>
+<span id="cb12-6"><a href="whats-web-development.html#cb12-6"></a>    <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href=</span><span class="st">&quot;style.css&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb12-7"><a href="whats-web-development.html#cb12-7"></a>  <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb12-8"><a href="whats-web-development.html#cb12-8"></a>  <span class="kw">&lt;body&gt;</span></span>
+<span id="cb12-9"><a href="whats-web-development.html#cb12-9"></a>    <span class="co">&lt;!-- All the HTML code comes before the script tag --&gt;</span></span>
+<span id="cb12-10"><a href="whats-web-development.html#cb12-10"></a>    <span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;script.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb12-11"><a href="whats-web-development.html#cb12-11"></a>  <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb12-12"><a href="whats-web-development.html#cb12-12"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<p>Want more practice? As a perfect supplement for the lessons in the Udemy course we recommend <a href="https://learnjavascript.online/">this website</a> as it will allow you to practice JS hands on. After all, programming is not learned through tutorials, but by applying it yourself. We also highly encourage you to code along the instructor, Colt Steele, as this will further increase learning-speed.</p>
+<p>Interesting reads:<br />
+- <a href="https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17">The History of JavaScript</a><br />
+- <a href="https://javascript.info/intro">A (different) introduction to JavaScript</a><br />
+- <a href="https://javascript.info/function-basics">Functions in JavaScript</a></p>
 
 </div>
 </div>

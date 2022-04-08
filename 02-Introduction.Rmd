@@ -3,6 +3,10 @@ In short, web developers build and maintain websites.
 Web developers often work for clients who are trying to get their product or service onto the web. The work is typically very project focused and involves collaborating with a team that helps to coordinate the client’s needs into the end product. The work could involve front-end, back-end, or full-stack web development.  
 In our course we will focus on front end development. The front end is what you see when you open any website in your browser. At as basic level, front-end developers use HTML, CSS and JavaScript.
 
+## How to use this section
+In the following we will briefly introduce HTML, CSS and JavaScript. Our intention here was not to go into every little detail there is (There have been whole books written about each of these!), but to give a broad overview of the different components and how they work together. The Udemy course will go over the concepts we outlay here and lot's of additional content in more detail. Use this section as an appetizer and/or as a refresher to come back to once you've gone through the course.  
+
+
 ## HTML
 
 HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.  
@@ -48,7 +52,8 @@ Now that you know the majority of the relevant tags the only question left to an
 All of the content, that appears on a webpage is written between the ```<body>``` tags.  
 So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
 
-TODO: Add a further reading seciton  
+Interesting reads  
+- [The most used HTML tags (8 million website analyzed)](https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/)
 
 ## CSS
 
@@ -122,8 +127,10 @@ Great, now you know alot about CSS, but how can we combine it with our HTML code
   <body>...</body>
 </html>
 ```
-
-TODO: Add a further reading seciton  
+  
+Interesting reads:  
+- [The Box Model - test your box model skills with exercises](https://www.w3schools.com/css/css_boxmodel.asp)  
+- [The Box Model on MDN (check out the sidebar aswell!)](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
 
 ## JavaScript
 
@@ -135,7 +142,7 @@ Let's dive in to JavaScript now! The JavaScript code that we will be writing dur
 
 </center>
 
-Now let's briefly go over the basis of JavaScript. The Udemy course will go over these concepts and lot's of additional content in more detail. Use this section as a refresher to come back to once you've gone through the course.  
+Now let's briefly go over the basis of JavaScript.  
 ```{JavaScript}
 /* Variables */
 let a = "hello"; /* Variables are simply storage containers */
@@ -194,13 +201,14 @@ button.style.color = "red";
 ```
   
 
-Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. Lets look at the boilerplate again.  
+Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. The updated boilerplate will look like this:  
 ```{html}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- All the HTML code comes before the script tag -->
@@ -209,7 +217,11 @@ Obviously it doesn’t make sense to keep going in the browser as none of the co
 </html>
 ```
   
-Great! That was a lot to take in. We recommend you to go through our outlined section of the Udemy course and come back here from time to time as a refresher and to see your progress as you will grasp more and more as time goes on. As a perfect supplement for the lessons in our Udemy course we recommend [this website](https://learnjavascript.online/) as it will allow you to practice JS hands on. After all, programming is not learned through tutorials, but by applying it yourself.
+  
+Want more practice? As a perfect supplement for the lessons in the Udemy course we recommend [this website](https://learnjavascript.online/) as it will allow you to practice JS hands on. After all, programming is not learned through tutorials, but by applying it yourself. We also highly encourage you to code along the instructor, Colt Steele, as this will further increase learning-speed.
 
-TODO: Add a further reading section
+Interesting reads:  
+- [The History of JavaScript](https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17)   
+- [A (different) introduction to JavaScript](https://javascript.info/intro)  
+- [Functions in JavaScript](https://javascript.info/function-basics)
 
