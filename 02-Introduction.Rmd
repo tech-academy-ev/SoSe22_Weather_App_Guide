@@ -48,7 +48,8 @@ Now that you know the majority of the relevant tags the only question left to an
 All of the content, that appears on a webpage is written between the ```<body>``` tags.  
 So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
 
-TODO: Add a further reading seciton
+TODO: Add a further reading seciton  
+
 ## CSS
 
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
@@ -122,7 +123,8 @@ Great, now you know alot about CSS, but how can we combine it with our HTML code
 </html>
 ```
 
-TODO: Add a further reading seciton
+TODO: Add a further reading seciton  
+
 ## JavaScript
 
 Let's dive in to JavaScript now! The JavaScript code that we will be writing during this semester will be run via the browser. As described in the last part on CSS, you can open the developer tools of your browser. There you’ll also find the console. You can type any JavaScript commands you like into this console, run them, and the browser will interpret the code for you. Let’s try a few examples:  
