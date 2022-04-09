@@ -4,8 +4,6 @@ whats-web-development
 tools
 ide
 api
-how-do-we-get-the-data
-how-do-we-use-the-data
 udemy
 project
 project-introduction
