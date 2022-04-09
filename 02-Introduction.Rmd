@@ -14,14 +14,14 @@ The structure of a html file is very simple. Almost all elements are just pieces
 ```{html}
 <title>Document</title>  
 ```
-And while the current version of HTML (HTML5) [140 different tags](https://www.w3schools.com/TAGS/default.ASP) contains, most webpages are made just out of a fraction of these. You've already seen the title tag, let's quicky take a look at some more of those, as these are also the ones that you will most likely be using during your project.  
+And while the current version of HTML (HTML5) contains [140 different tags](https://www.w3schools.com/TAGS/default.ASP), most webpages are made just out of a fraction of these. You've already seen the title tag, let's quickly take a look at some more of those, as these are also the ones that you will most likely be using during your project.  
 - ```<html>```: Must enclose the entire rest of the code  
 - ```<head>```: Contains the title, the link to the css (styling) file and various other information  
 - ```<body>```: Contains the contents of a website  
 - ```<p>```: Paragraph, simple text belongs here  
 - ```<hX>```: X is a number between 1 (large heading) and 6 (small heading)   
 - ```<div>```: Structure that groups content inside  
-- ```<ul>```: Unordered list containint list items ```<li>```    
+- ```<ul>```: Unordered list containing list items ```<li>```    
 - ```<a>```: Link tag, used to link from one website to the next   
 - ```<img>```: An image in an HTML page   
 - ```<form>```: To create an HTML form for user input    
@@ -50,7 +50,7 @@ Now that you know the majority of the relevant tags the only question left to an
 </html>
 ```
 All of the content, that appears on a webpage is written between the ```<body>``` tags.  
-So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the !!TODO:LINK TO SECTION!!. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
+So.. we know the basic structure and some HTML tags, but how and where do we write HTML Code? The answer is straight forward: We can write HTML Code anywhere! Even in a simple plain editor, as long as we save the code as .html we can view the results in the web-browser. But don't worry, there are more handy choices that we will look at in the [Tools Section][Tools]. Please note here, that we should always save the homepage of our websites as index.html. This is because web servers will by default look for an index.html page when users land on our websites - and not having one will cause big problems.  
 
 Interesting reads  
 - [The most used HTML tags (8 million website analyzed)](https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/)
