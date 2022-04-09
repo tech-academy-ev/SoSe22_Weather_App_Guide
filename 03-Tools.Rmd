@@ -40,30 +40,32 @@ For your project we recommend you to use the [OpenWeather API](https://openweath
 
 ## Udemy
 
-For this course you will be learning with the [The Web Development Bootcamp 2022](...) on Udemy. Even if you really want to learn JavaScript very early, we strongly suggest beginners to follow the provided order of the courses as their contents build on eachother.
+For this course you will be learning with the [The Web Development Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/) on Udemy. Even if you realy want to learn JavaScript very early, we strongly suggest beginners to follow the provided order of the courses as their contents build on each other.
 
-You won't need to watch the whole course to finish the project. Because this will be a simple frontend project and the second part of the Udemy course is all about backend. During the course there also a lot of sections in which you will build things. You can skip those sections if you like to but if you have the time try them on your own you learn the most building stuff and apply what you have learned.
+You won't need to watch the whole course to finish the project. Because this will be a simple frontend project and the second part of the Udemy course is all about backend. During the course there are also a lot of sections in which you will build things. You can skip those sections if you like to but if you have the time try them on your own. You learn the most by building stuff and apply what you have learned.
 
 In the table below you can find the sections you need to watch to complete your project:
 
-1. Course Orientation
-2. An Introduction to Web Development
-3. HTML: The Essentials
-4. HTML: Next Steps & Semantics
-5. HTML: Forms & Tables
-6. CSS: The Very Basics
-7. CSS: The World of CSS Selectors
-8. The CSS Box Model
-9. Responsive CSS & Flexbox
-10. JavaScript Basics!
-11. JavaScript String and More
-12. JavaScript Decision Making
-13. JavaScript Arrays
-14. JavaScript Object Literals
-15. JavaScript Repeating Stuff With Loops
-16. NEW: Introducing Functions
-17. Callbacks & Array Methods
-18. Introducing The World Of The DOM
-19. The Missing Piece: DOM Events
-20. Async JavaScript: Oh Boy!
-21. AJAX and API's
+| Section Name                              | Duration (h) |
+|-------------------------------------------|--------------|
+|1. Course Orientation                      | 0.5 |
+| 2. An Introduction to Web Development     | 0.75 |
+| 3. HTML: The Essentials                   | 1 |
+| 4. HTML: Next Steps & Semantics           | 1 |
+| 5. HTML: Forms & Tables                   | 1 |
+| 6. CSS: The Very Basics                   | 1 |
+| 7. CSS: The World of CSS Selectors        | 1.25 |
+| 8. The CSS Box Model                      | 1 |
+| 9. Responsive CSS & Flexbox               | 1.25 |
+| 10. JavaScript Basics!                    | 1 |
+| 11. JavaScript String and More            | 0.75 |
+| 12. JavaScript Decision Making            | 1.25 |
+| 13. JavaScript Arrays                     | 1 |
+| 14. JavaScript Object Literals            | 0.5 |
+| 15. JavaScript Repeating Stuff With Loops | 1.5 |
+| 16. NEW: Introducing Functions            | 0.5 |
+| 17. Callbacks & Array Methods             | 1.5 |
+| 18. Introducing The World Of The DOM      | 1.75 |
+| 19. The Missing Piece: DOM Events         | 1.75 |
+| 20. Async JavaScript: Oh Boy!             | 1.5 |
+| 21. AJAX and API's                        | 1.5 |
