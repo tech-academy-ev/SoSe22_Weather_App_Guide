@@ -38,6 +38,8 @@ After you fetched the data from an API you have to change the format of the data
 
 For your project we recommend you to use the [OpenWeather API](https://openweathermap.org/api) which has a free tier that you can use after creating a free account. If you read their documentation page you will see many different API options you can choose from. But don't worry! Once you know how one of them works you will get the hang of it. You can start with the „Current Weather Data API Call“ and inspect the data structure. Note which data you will need and try to extract it from there. You can use a Chrome Extension called JSON Formatter to have a clear look at the data.
 
+![You can try this API Call in the beginning](assets/API-Call.png)
+
 ## Udemy
 
 For this course you will be learning with the [The Web Development Bootcamp 2022](https://www.udemy.com/course/the-web-developer-bootcamp/) on Udemy. Even if you realy want to learn JavaScript very early, we strongly suggest beginners to follow the provided order of the courses as their contents build on each other.
