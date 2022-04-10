@@ -1,5 +1,16 @@
 # Project
 
 ## Project introduction
+As you know by now this semester you will work on a weather app. This chapter will contain many information about the project. You can come back here anytime to watch your progress and also get some ideas how you should start and go on with the features the weather app will have. We have build an example weather app which can serve as an orientation but you can style your app as you wish.
+
+![Our sample weather app](assets/sample-weather-app.png)
+
+But don't you think an weather app is just a panel that shows us the current weather of a city. You can add a lot of small features that can make a big user experience difference. Some of these features will be mandatory for your project and some of them are just ideas you can incorporate in your app.
+
+| Mandatory Features | Other Feature Ideas |
+|--------------------|---------------------|
+| Search bar for city| Sidebar with last searched cities |
+| Forecast bar for daily weather | Weather for current user location |
+|| Toggle functionality for forecast and/or last searches |
 
 ## Your assingment(s)
