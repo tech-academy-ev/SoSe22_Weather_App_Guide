@@ -15,5 +15,3 @@ additional-resources
 git-and-github
 json
 font-awesome
-frameworks-and-react.js
-node.js
