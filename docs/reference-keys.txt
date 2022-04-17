@@ -1,6 +1,9 @@
-welcome
 introduction
 whats-web-development
+how-to-use-this-section
+html
+css
+javascript
 tools
 ide
 api
@@ -13,5 +16,3 @@ additional-resources
 git-and-github
 json
 font-awesome
-frameworks-and-react.js
-node.js
