@@ -29,9 +29,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
+<link rel="prev" href="whats-web-development.html"/>
 <link rel="next" href="project.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,11 +48,76 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -71,33 +136,28 @@
 <li><a href="./">Weather App Project</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!<span></span></a></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction<span></span></a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#whats-web-development"><i class="fa fa-check"></i><b>2.1</b> What’s web development?<span></span></a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="2" data-path="whats-web-development.html"><a href="whats-web-development.html"><i class="fa fa-check"></i><b>2</b> What’s web development?<span></span></a><ul>
+<li class="chapter" data-level="2.1" data-path="whats-web-development.html"><a href="whats-web-development.html#how-to-use-this-section"><i class="fa fa-check"></i><b>2.1</b> How to use this section<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="whats-web-development.html"><a href="whats-web-development.html#html"><i class="fa fa-check"></i><b>2.2</b> HTML<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="whats-web-development.html"><a href="whats-web-development.html#css"><i class="fa fa-check"></i><b>2.3</b> CSS<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="whats-web-development.html"><a href="whats-web-development.html#javascript"><i class="fa fa-check"></i><b>2.4</b> JavaScript<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools<span></span></a>
-<ul>
+<li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools<span></span></a><ul>
 <li class="chapter" data-level="3.1" data-path="tools.html"><a href="tools.html#ide"><i class="fa fa-check"></i><b>3.1</b> IDE<span></span></a></li>
-<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.2</b> API<span></span></a>
-<ul>
+<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.2</b> API<span></span></a><ul>
 <li><a href="tools.html#how-do-we-get-the-data">How do we get the data?<span></span></a></li>
-<li><a href="tools.html#how-do-we-use-the-data">How do we use the data?<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="tools.html"><a href="tools.html#udemy"><i class="fa fa-check"></i><b>3.3</b> Udemy<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>4</b> Project<span></span></a>
-<ul>
+<li class="chapter" data-level="4" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>4</b> Project<span></span></a><ul>
 <li class="chapter" data-level="4.1" data-path="project.html"><a href="project.html#project-introduction"><i class="fa fa-check"></i><b>4.1</b> Project introduction<span></span></a></li>
 <li class="chapter" data-level="4.2" data-path="project.html"><a href="project.html#your-assingments"><i class="fa fa-check"></i><b>4.2</b> Your assingment(s)<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>5</b> Additional Resources<span></span></a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="additional-resources.html"><a href="additional-resources.html#git-and-github"><i class="fa fa-check"></i><b>5.1</b> Git and Github<span></span></a></li>
+<li class="chapter" data-level="5" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>5</b> Additional Resources<span></span></a><ul>
+<li class="chapter" data-level="5.1" data-path="additional-resources.html"><a href="additional-resources.html#git-and-github"><i class="fa fa-check"></i><b>5.1</b> Git and GitHub<span></span></a></li>
 <li class="chapter" data-level="5.2" data-path="additional-resources.html"><a href="additional-resources.html#json"><i class="fa fa-check"></i><b>5.2</b> JSON<span></span></a></li>
 <li class="chapter" data-level="5.3" data-path="additional-resources.html"><a href="additional-resources.html#font-awesome"><i class="fa fa-check"></i><b>5.3</b> Font Awesome<span></span></a></li>
-<li class="chapter" data-level="5.4" data-path="additional-resources.html"><a href="additional-resources.html#frameworks-and-react.js"><i class="fa fa-check"></i><b>5.4</b> Frameworks and React.js<span></span></a></li>
-<li class="chapter" data-level="5.5" data-path="additional-resources.html"><a href="additional-resources.html#node.js"><i class="fa fa-check"></i><b>5.5</b> Node.js<span></span></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://tech-academy.io/" target="blank">&copy 2022 TechAcademy e.V.</a></li>
@@ -119,47 +179,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tools" class="section level1 hasAnchor" number="3">
+<div id="tools" class="section level1 hasAnchor">
 <h1><span class="header-section-number">Chapter 3</span> Tools<a href="tools.html#tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="ide" class="section level2 hasAnchor" number="3.1">
+<div id="ide" class="section level2 hasAnchor">
 <h2><span class="header-section-number">3.1</span> IDE<a href="tools.html#ide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you know the basics of Web Development you are ready to go and write some code!</p>
-<p>But there is still a question left to answer.</p>
-<p>Where do programmers write their code. Surely not in a Word document or the default text editor of their operating system. Developers use an Integrated Development Environment (IDE) to write code because it comes with a lot of handy features that help developers code faster and cleaner.</p>
-<p>The most IDEs have a lot of features that you probably wont even need during this course but once you get used to the following advantages you don’t want to code without them anymore.</p>
+<p>But there is still a question left to answer: Where do programmers write their code?</p>
+<p>As we have already pointed out, you could start programming in the default text editor of your operating system, however take our word on that: You do not want to do that. Most developers use an Integrated Development Environment (IDE) to write code because it comes with a lot of handy features that help developers code faster and cleaner.</p>
+<p>They come packed full of features, most of which you wont need for this course, however once you get used to the environment, you will never look back. Let’s look at some reasons they’re so handy.</p>
 <p><strong>1. Graphical User Interface</strong><br />
-The GUI of an IDE has been designed in a way that allows you to see your file directory, editor, terminal and some IDEs even have an interface to download packages and even for version control.</p>
+The GUI of an IDE has been designed in a way that allows you to see your project directory, editor and terminal all at once. This makes it very easy to navigate between the different html, css and javascript files.</p>
 <p><strong>2. Autocomplete</strong><br />
-If the IDE knows your programming language it can anticipate what you are going to type next and it will pop up some autocompletion suggestions.</p>
+If the IDE knows your programming language it can anticipate what you are going to type next and thus allow for faster development.</p>
 <p><strong>3. Syntax Highlighting</strong><br />
-The IDE can also provide some visual aid to your syntax based on your programming language, so that special words have a different color, opening and closing parentheses will have the same color. This may seem distracting at the beginning but once you get used to it, it will help you code faster.</p>
+An IDE that knows the syntax of your programming language can provide visual cues. Keywords, words that have special meaning like if, for or while in JavaScript, are highlighted with different colors.</p>
 <p><strong>4. Debugging</strong><br />
-No one can avoid to write code without bugs. IDEs know that and they are always in search of your mistakes such as typos, syntax errors and even reference errors. The cool thing is that it will show you the error even before you run your code. That way you don’t have to wait for your code to run and break.</p>
-<p>Some popular IDEs for Web Development are Visual Studio Code, Vim and Sublime Text 3. We recommend you to use <a href="https://code.visualstudio.com/">Visual Studio Code</a> as it is also used in the Udemy Course you will be learning with.</p>
-<p>For this course and your project you can also use the online code editor <a href="https://codesandbox.io/">CodeSandbox</a>. This IDE is based on the same platform as Visual Studio Code, but offers some additional functionalities. You can create teams that can not only access the same files but you can also have a live coding session together in the same file. To sign up you need a free account, which you can create in a matter of seconds.</p>
+No one can avoid to write code without errors. IDEs provide hints while coding to prevent errors before compilation and help you with debugging afterwards.</p>
+<p>Some popular IDEs for Web Development are Visual Studio Code, Vim and Sublime Text 3. In the Udemy course your instructor will use Visual Studio Code. Feel free to check it out <a href="https://code.visualstudio.com/">here</a>.</p>
+<p>For this course and your project, you will use the online code editor <a href="https://codesandbox.io/">CodeSandbox</a>. You will learn exactly how that is done in the first Meetup. This IDE is based on the same platform as Visual Studio Code, but offers some additional functionalities. The user interface has been designed in a way that allows you to see your file directory, editor, and your executed program all at once. CodeSandbox allows you to create teams that can not only access the same files but also make it possible to have live coding session together. To sign up you only need a free Github account, which you can create in a matter of seconds.</p>
 </div>
-<div id="api" class="section level2 hasAnchor" number="3.2">
+<div id="api" class="section level2 hasAnchor">
 <h2><span class="header-section-number">3.2</span> API<a href="tools.html#api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This semester the web development course will build an interactive weather application but more on the project will come later. For now let’s answer the question: Where does our weather data come from? Obviously we do not keep track of the weather data. There are plenty of APIs that provide such a service. But what exactly is an API? An API (Application Programming Interface) allows programmers to get some data from somewhere else and do whatever you want to do with it. For example you could display such data on your web page. These API services are often expensive but there are some very cool APIs that allow us to do some stuff for free.</p>
+<p>For this semester project you will also need to learn about APIs. But what exactly is an API? An API (Application Programming Interface) allows different devices to connect to each other and send, update and request data from one to the other. You can think of it as a waiter in a restaurant. The waiter connects you to the kitchen, takes and understands your order, delivers it to the kitchen and comes back with the very thing you desired. APIs function ina very similar way.</p>
 <div id="how-do-we-get-the-data" class="section level3 unnumbered hasAnchor">
 <h3>How do we get the data?<a href="tools.html#how-do-we-get-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Every API works differently but if you understand one API you probably will also understand every other API very easily. We have to write some code that asks the API what data we want? In JavaScript you can use the fetch() function to request data from somewhere.</p>
+<p>Every API is unique but if you understand how to obtain output from one API you will know how to get data from all.
+For the most part, APIs are accessed through URLs, and the specifics of how to query these URLs change based on the specific service you are using. For example, the <a href="https://openweathermap.org/api">OpenWeatherMap API</a>, that we will be using in our project, has several types of data that you can request. To get the current weather in London, type in the following URL into your browser.</p>
+<pre><code>api.openweathermap.org/data/2.5/weather?q=London</code></pre>
+<p>You will get an error message, prompting you to use an API key. Go ahead and <a href="https://home.openweathermap.org/users/sign_up">create an account</a> to obtain an API key from their free tier. Once the key has been activated, which can take up to 2 hours, try making a new request with the city of your choice AND the API key passed in as query string parameters, like the example above.</p>
+<pre><code>api.openweathermap.org/data/2.5/weather?q=London&amp;APPID=YOUR_API_KEY_HERE</code></pre>
+<p>Congrats, you have made your first API request!</p>
+<p>So how do we actually get the data from an API into our code?</p>
+<p>In JavaScript we use the <a href="https://developer.mozilla.org/de/docs/Web/API/Fetch_API">Fetch API</a> to make our API call. You will learn more about how to use it in section 28 of the Udemy course, but to provide you with a template for later on and as a reminder, this is one way of how to deal with fetch:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="tools.html#cb15-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="at">exampleAPICall</span>() <span class="op">{</span></span>
+<span id="cb15-2"><a href="tools.html#cb15-2"></a>  <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb15-3"><a href="tools.html#cb15-3"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="at">fetch</span>(</span>
+<span id="cb15-4"><a href="tools.html#cb15-4"></a>      <span class="st">&quot;https://api.openweathermap.org/data/2.5/weather?q=London&amp;AAPID=YOUR_API_KEY_HERE&quot;</span></span>
+<span id="cb15-5"><a href="tools.html#cb15-5"></a>    )<span class="op">;</span></span>
+<span id="cb15-6"><a href="tools.html#cb15-6"></a>    <span class="kw">const</span> data <span class="op">=</span> <span class="cf">await</span> <span class="va">response</span>.<span class="at">json</span>()<span class="op">;</span></span>
+<span id="cb15-7"><a href="tools.html#cb15-7"></a>  <span class="op">}</span> <span class="cf">catch</span> (error) <span class="op">{</span></span>
+<span id="cb15-8"><a href="tools.html#cb15-8"></a>    <span class="va">console</span>.<span class="at">log</span>(error)<span class="op">;</span></span>
+<span id="cb15-9"><a href="tools.html#cb15-9"></a>  <span class="op">}</span></span>
+<span id="cb15-10"><a href="tools.html#cb15-10"></a><span class="op">}</span></span></code></pre></div>
 </div>
-<div id="how-do-we-use-the-data" class="section level3 unnumbered hasAnchor">
-<h3>How do we use the data?<a href="tools.html#how-do-we-use-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>After you fetched the data from an API you have to change the format of the data into an JavaScript object so that you can work with those information. Some of you might ask in which form the data comes to us and that would be very good question. Most API Services use JSON (JavaScript Object Notation) to send data. You can read more about it in the additional resources part but for now you should know that it is a text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client).</p>
-<p>For your project we recommend you to use the <a href="https://openweathermap.org/api">OpenWeather API</a> which has a free tier that you can use after creating a free account. If you read their documentation page you will see many different API options you can choose from. But don’t worry! Once you know how one of them works you will get the hang of it. You can start with the „Current Weather Data API Call“ and inspect the data structure. Note which data you will need and try to extract it from there. You can use a Chrome Extension called JSON Formatter to have a clear look at the data.</p>
-<div class="figure">
-<img src="assets/API-Call.png" alt="" />
-<p class="caption">You can try this API Call in the beginning</p>
 </div>
-</div>
-</div>
-<div id="udemy" class="section level2 hasAnchor" number="3.3">
+<div id="udemy" class="section level2 hasAnchor">
 <h2><span class="header-section-number">3.3</span> Udemy<a href="tools.html#udemy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this course you will be learning with the <a href="https://www.udemy.com/course/the-web-developer-bootcamp/">The Web Development Bootcamp 2022</a> on Udemy. Even if you realy want to learn JavaScript very early, we strongly suggest beginners to follow the provided order of the courses as their contents build on each other.</p>
-<p>You won’t need to watch the whole course to finish the project. Because this will be a simple frontend project and the second part of the Udemy course is all about backend. During the course there are also a lot of sections in which you will build things. You can skip those sections if you like to but if you have the time try them on your own. You learn the most by building stuff and apply what you have learned.</p>
-<p>In the table below you can find the sections you need to watch to complete your project:</p>
+<p>For this course you will be working with the <a href="https://www.udemy.com/course/the-web-developer-bootcamp/">The Web Development Bootcamp 2022</a> on Udemy.</p>
+<p>Beware, this course filled with a ton of content. For our project we are only focusing on the front-end so you can naturally ignore (for now) the later half of the course, which exclusively deals with the back-end. We encourage you to do all the exercises you will encounter in between. You will learn a lot by actually doing the exercises and programming on your project will become far simpler.</p>
+<p>The following sections should leave you with enough knowledge to complete your project:</p>
 <table>
 <thead>
 <tr class="header">
@@ -201,55 +269,55 @@ No one can avoid to write code without bugs. IDEs know that and they are always 
 <td>1</td>
 </tr>
 <tr class="odd">
-<td>9. Responsive CSS &amp; Flexbox</td>
+<td>10. Responsive CSS &amp; Flexbox</td>
 <td>1.25</td>
 </tr>
 <tr class="even">
-<td>10. JavaScript Basics!</td>
+<td>14. JavaScript Basics!</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td>11. JavaScript String and More</td>
+<td>15. JavaScript String and More</td>
 <td>0.75</td>
 </tr>
 <tr class="even">
-<td>12. JavaScript Decision Making</td>
+<td>16. JavaScript Decision Making</td>
 <td>1.25</td>
 </tr>
 <tr class="odd">
-<td>13. JavaScript Arrays</td>
+<td>17. JavaScript Arrays</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<td>14. JavaScript Object Literals</td>
+<td>18. JavaScript Object Literals</td>
 <td>0.5</td>
 </tr>
 <tr class="odd">
-<td>15. JavaScript Repeating Stuff With Loops</td>
+<td>19. JavaScript Repeating Stuff With Loops</td>
 <td>1.5</td>
 </tr>
 <tr class="even">
-<td>16. NEW: Introducing Functions</td>
+<td>20. NEW: Introducing Functions</td>
 <td>0.5</td>
 </tr>
 <tr class="odd">
-<td>17. Callbacks &amp; Array Methods</td>
+<td>22. Callbacks &amp; Array Methods</td>
 <td>1.5</td>
 </tr>
 <tr class="even">
-<td>18. Introducing The World Of The DOM</td>
+<td>24. Introducing The World Of The DOM</td>
 <td>1.75</td>
 </tr>
 <tr class="odd">
-<td>19. The Missing Piece: DOM Events</td>
+<td>25. The Missing Piece: DOM Events</td>
 <td>1.75</td>
 </tr>
 <tr class="even">
-<td>20. Async JavaScript: Oh Boy!</td>
+<td>27. Async JavaScript: Oh Boy!</td>
 <td>1.5</td>
 </tr>
 <tr class="odd">
-<td>21. AJAX and API’s</td>
+<td>28. AJAX and APIs</td>
 <td>1.5</td>
 </tr>
 </tbody>
@@ -262,7 +330,7 @@ No one can avoid to write code without bugs. IDEs know that and they are always 
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="whats-web-development.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
