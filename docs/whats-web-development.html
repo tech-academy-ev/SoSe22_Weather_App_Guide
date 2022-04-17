@@ -195,17 +195,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 2</span> What’s web development?<a href="whats-web-development.html#whats-web-development" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In short, web developers build and maintain websites.<br />
 Web developers often work for clients who are trying to get their product or service onto the web. The work is typically very project focused and involves collaborating with a team that helps to coordinate the client’s needs into the end product. The work could involve front-end, back-end, or full-stack web development.<br />
-In our course we will focus on front end development. The front end is what you see when you open any website in your browser. At as basic level, front-end developers use HTML, CSS and JavaScript.</p>
+In our course we will focus on front-end development. The front end is what you see when you open any website in your browser. At a basic level, front-end developers use HTML, CSS and JavaScript.</p>
 <div id="how-to-use-this-section" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.1</span> How to use this section<a href="whats-web-development.html#how-to-use-this-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the following we will briefly introduce HTML, CSS and JavaScript. Our intention here was not to go into every little detail there is (There have been whole books written about each of these!), but to give a broad overview of the different components and how they work together. The Udemy course will go over the concepts we outlay here and lot’s of additional content in more detail. Use this section as an appetizer and/or as a refresher to come back to once you’ve gone through the course.</p>
+<p>In the following we will briefly introduce HTML, CSS and JavaScript. Our intention here was not to go into every little detail there is (There have been whole books written about each of these!), but to give a broad overview of the different components and how they work together. The Udemy course will go over the concepts we outlay here and lots of additional content in more detail. Use this section as an appetizer and/or as a refresher to come back to once you’ve gone through the course.</p>
 </div>
 <div id="html" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.2</span> HTML<a href="whats-web-development.html#html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.<br />
 The structure of a html file is very simple. Almost all elements are just pieces of content wrapped in opening and closing HTML tags. For example, you would write the title of a webpage like so:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="whats-web-development.html#cb1-1"></a><span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span>  </span></code></pre></div>
-<p>And while the current version of HTML (HTML5) contains <a href="https://www.w3schools.com/TAGS/default.ASP">140 different tags</a>, most webpages are made just out of a fraction of these. You’ve already seen the title tag, let’s quickly take a look at some more of those, as these are also the ones that you will most likely be using during your project.<br />
+<p>And while the current version of HTML (HTML5) contains <a href="https://www.w3schools.com/TAGS/default.ASP">140 different tags</a>, most webpages are made just out of a fraction of these. You’ve already seen the title tag, let’s quickly take a look at some more of those common ones. They are also the ones that you will most likely be using during your project.<br />
 - <code>&lt;html&gt;</code>: Must enclose the entire rest of the code<br />
 - <code>&lt;head&gt;</code>: Contains the title, the link to the css (styling) file and various other information<br />
 - <code>&lt;body&gt;</code>: Contains the contents of a website<br />
@@ -318,11 +318,11 @@ h1 {
 </div>
 <div id="javascript" class="section level2 hasAnchor">
 <h2><span class="header-section-number">2.4</span> JavaScript<a href="whats-web-development.html#javascript" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let’s dive in to JavaScript now! The JavaScript code that we will be writing during this semester will be run via the browser. As described in the last part on CSS, you can open the developer tools of your browser. There you’ll also find the console. You can type any JavaScript commands you like into this console, run them, and the browser will interpret the code for you. Let’s try a few examples:</p>
+<p>Let’s dive in to JavaScript now! The JavaScript code that we will be writing during this semester will be run via the browser. As described in the last part on CSS, you can open the developer tools of your browser. There you’ll also find the console. You can type any JavaScript command you like into the console, run it, and the browser will interpret the code for you. Let’s try a few examples:</p>
 <center>
 <p><img src="assets/console.png" /></p>
 </center>
-<p>Now let’s briefly go over the basis of JavaScript.</p>
+<p>Let’s go over some more code. Feel free to type along in your console.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="whats-web-development.html#cb8-1"></a><span class="co">/* Variables */</span></span>
 <span id="cb8-2"><a href="whats-web-development.html#cb8-2"></a><span class="kw">let</span> a <span class="op">=</span> <span class="st">&quot;hello&quot;</span><span class="op">;</span> <span class="co">/* Variables are simply storage containers */</span></span>
 <span id="cb8-3"><a href="whats-web-development.html#cb8-3"></a>a <span class="op">=</span> <span class="st">&quot;bye&quot;</span><span class="op">;</span>       <span class="co">/* You use let to declare them if you expect the value to change */</span></span>

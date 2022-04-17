@@ -1,7 +1,7 @@
 # Project
 
 ## Project introduction
-As mentioned before, this semester you will work on a weather website. Use everything you've learned in the Udemy course to create a weather forecast site using the weather API openweathermap.org, that we have looked into in the [API Section][API]. To complete this course, you are asked to meet the defined requirements. We will lay out the minimal requirements as well as give some inspiration for further development, make this project your own! Use this chapter as a rough guideline on how far you should progress in each Meetup. 
+As mentioned before, this semester you will work on a weather website. Use everything you've learned in the Udemy course to create a weather forecast site using the weather API openweathermap.org, that we have looked into in the [API Section][API]. To complete this course, you are asked to meet the defined requirements. We will lay out the minimal requirements as well as give some inspiration for further development, make this project your own! Use this chapter as a rough guideline on how far you should progress everytime we meet up.  
 
 ## Minimal Requirements
 
@@ -9,7 +9,7 @@ As mentioned before, this semester you will work on a weather website. Use every
 You should be able to look up any city name and by the press of a button/the enter key display the weather info of that city. Look into HTML forms!
 
 ### 2. API Call {-}
-In order to get the data for the weather we require you to use the [Open Weather Map API](https://openweathermap.org/). Read their documentation!
+In order to get the data for the weather we require you to use the Open Weather Map API. Check out their documentation [here](https://openweathermap.org/appid).
 
 ### 3. City Information {-}
 The name of the city, the current time, temperature and other city-specific information should be displayed in an appropriate section.
@@ -19,7 +19,7 @@ Your website should have another section displaying a daily forecast for the nex
 
 ## Curriculum
 
-The Web Development track includes five dates in which participants are introduced to Web Development and have the chance to work together on their project. The following is intended to give you some direction on what we think would be a good working-pace for your project. We won't spoil much here, but instead give some hints and make you aware of problems you may encounter.  
+In the following semester we will have 4+1 meetups. The following is intended to give you some direction on what we think would be a good working-pace for your project. We won't spoil much here, but instead give some hints and make you aware of problems you may encounter.  
 
 
 ### 04.05.2022 - Web-Dev Coding Introduction {-}
@@ -66,6 +66,7 @@ By now, you should be done with all our recommended sections.
 #### Action {-}
 1. Finish up any left-over tasks from before.
 2. Make this project your own! There are many additional features you can add. Here are some ideas:
+- Check out [Font Awesome][Font Awesome]
 - Toggle options between Celcius/Fahrenheit
 - Add a search history with the [Local storage API](https://developer.mozilla.org/de/docs/Web/API/Window/localStorage)
 - Ability to hide the forecast/search history with [keyframes](https://developer.mozilla.org/de/docs/Web/CSS/@keyframes)
