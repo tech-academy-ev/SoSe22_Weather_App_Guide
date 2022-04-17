@@ -17,9 +17,10 @@ The name of the city, the current time, temperature and other city-specific info
 ### 4. Forecast Information {-}
 Your website should have another section displaying a daily forecast for the next 7 days. 
 
+
 ## Curriculum
 
-In the following semester we will have 4+1 meetups. The following is intended to give you some direction on what we think would be a good working-pace for your project. We won't spoil much here, but instead give some hints and make you aware of problems you may encounter.  
+In the next months we will have 4+1 meetups. The following is intended to give you some direction on what we think would be a good working-pace for your project. We won't spoil much here, but instead give some hints and make you aware of problems you may encounter.  
 
 
 ### 04.05.2022 - Web-Dev Coding Introduction {-}
