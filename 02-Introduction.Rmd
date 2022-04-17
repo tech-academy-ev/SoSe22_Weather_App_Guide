@@ -11,6 +11,9 @@ In the following we will briefly introduce HTML, CSS and JavaScript. Our intenti
 ## HTML
 
 HTML, short for Hypertext Markup Language, is the raw data that a webpage is built out of. It allows you to structure the website through sections, paragraphs, headings and lets you create text, links, cards, lists, and buttons.  
+  
+### Tags {-}  
+
 The structure of a html file is very simple. Almost all elements are just pieces of content wrapped in opening and closing HTML tags. For example, you would write the title of a webpage like so: 
 ```{html}
 <title>Document</title>  
@@ -37,6 +40,7 @@ To all of these tags you can add classes or id's. An id has to be unique. Why wo
 </div>
 ```
   
+### Structure {-} 
   
 Now that you know the majority of the relevant tags the only question left to answer is how do we actually write HTML code. For that it is relevant that all HTML documents have the same boilerplate-like structure that needs to be in place before anything useful can be done. The boilerplate looks something like this and is often easily accessible with a shortcut (so you don't have to type it all out everytime you create a new file): 
 ```{html}
@@ -59,6 +63,9 @@ Interesting reads
 ## CSS
 
 Now we have a structure for the contents of a website, but to be frank: that looks horrible. The next step is to make that structure look good with some style, which is exactly what CSS, short for Cascading Style Sheets, is for. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs, variations in display for different devices and screen sizes as well as a variety of other effects.  
+  
+### Syntax {-}  
+
 The CSS Syntax is as straight forward as it was the case with HTML. It is a rule-based syntax and every rule is made up of a selector and a semi-colon separated list of property:value pairs.  
   
 <center>
@@ -88,6 +95,8 @@ If you only want to style one element, you use the hashtag-notation and add an i
 }
 ```
   
+### Common properties {-}    
+
 Now, let's check out the properties that you will encounter most often.  
 
 - ```width```: specifies the width of the element's content area  
@@ -101,6 +110,8 @@ Now, let's check out the properties that you will encounter most often.
 - ```font-family```: Sets font style (arial, times...)   
 - ```margin```: distance from the border of one element to the border of the other element    
 - ```padding```:  distance from border to the content of the element  
+  
+### Box Model {-}  
 
 CSS is based on the so-called box model: every element is a box. The content inside the element is a box, surrounded by the padding, surrounded by the border and surrounded by the margin.   
   
@@ -114,8 +125,10 @@ This schematic can also be found in every modern web browser. Simply open your f
   
   
 ![](assets/ta-website.png)
+  
+### Style.css {-}  
 
-Great, now you know alot about CSS, but how can we combine it with our HTML code? There are several way's that you'll come across, but the most common way is to create a new file, by convention often named style.css, and put all our css code there. Now we only have to link our created file in the head section of the html page and we are all set. For that to work, these files have to be in the same folder.  
+Great, now you know alot about CSS, but how can we combine it with our HTML code? There are several way's that you'll come across, but the most common way is to create a new file, by convention often named style.css, and put all our css code there. Afterwards we only have to link our created file in the head section of the html page and we are all set. For that to work, these files have to be in the same folder.  
 
 ```{html}
 <!DOCTYPE html>
@@ -141,7 +154,9 @@ Let's dive in to JavaScript now! The JavaScript code that we will be writing dur
 
 ![](assets/console.png)
 
-</center>
+</center>  
+
+### Code samples {-}  
 
 Let's go over some more code. Feel free to type along in your console.    
 ```{JavaScript}
@@ -183,7 +198,9 @@ while (a >= 50) {
   a -= 10;  /* Our variable a will decrement by 10 as long as a is larger than 50 */
 }
 ```
-  
+
+### The DOM {-}  
+
 Now I bet you're asking how does this all link up to HTML and CSS? The DOM, or document object, is where it all comes together. The DOM is the most important object in JavaScript - it's the JavaScript representation of the structure of our HTML and is present in the variable document, when we load the page. Through the dom we can search through the document object,
 ```{JavaScript}
 const header = document.getElementById("header");
@@ -201,6 +218,7 @@ const button = document.getElementById("login-button");
 button.style.color = "red";
 ```
   
+### Script.js {-}  
 
 Obviously it doesn’t make sense to keep going in the browser as none of the code will persist. Similar to CSS, the most common approach is to add a new file, often named script.js and to place a script tag at the end of our HTML code to link to that file. The updated boilerplate will look like this:  
 ```{html}
