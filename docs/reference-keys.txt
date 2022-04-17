@@ -7,7 +7,8 @@ api
 udemy
 project
 project-introduction
-your-assingments
+minimal-requirements
+curriculum
 additional-resources
 git-and-github
 json
