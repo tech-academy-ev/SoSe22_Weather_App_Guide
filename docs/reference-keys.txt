@@ -6,8 +6,8 @@ css
 javascript
 tools
 ide
-api
 udemy
+api
 project
 project-introduction
 minimal-requirements

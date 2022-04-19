@@ -157,10 +157,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools<span></span></a><ul>
 <li class="chapter" data-level="3.1" data-path="tools.html"><a href="tools.html#ide"><i class="fa fa-check"></i><b>3.1</b> IDE<span></span></a></li>
-<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.2</b> API<span></span></a><ul>
+<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#udemy"><i class="fa fa-check"></i><b>3.2</b> Udemy<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="tools.html"><a href="tools.html#api"><i class="fa fa-check"></i><b>3.3</b> API<span></span></a><ul>
 <li><a href="tools.html#how-do-we-get-the-data">How do we get the data?<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="tools.html"><a href="tools.html#udemy"><i class="fa fa-check"></i><b>3.3</b> Udemy<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>4</b> Project<span></span></a><ul>
 <li class="chapter" data-level="4.1" data-path="project.html"><a href="project.html#project-introduction"><i class="fa fa-check"></i><b>4.1</b> Project introduction<span></span></a></li>
@@ -221,35 +221,8 @@ No one can avoid to write code without errors. IDEs provide hints while coding t
 <p>Some popular IDEs for Web Development are Visual Studio Code, Vim and Sublime Text 3. In the Udemy course your instructor will use Visual Studio Code. Feel free to check it out <a href="https://code.visualstudio.com/">here</a>.</p>
 <p>For this course and your project, you will use the online code editor <a href="https://codesandbox.io/">CodeSandbox</a>. We will set up the environment together in the first Meetup. This IDE is based on the same platform as Visual Studio Code, but offers some additional functionalities. The user interface has been designed in a way that allows you to see your file directory, editor, and your executed program all at once. CodeSandbox allows you to create teams that can not only access the same files but also make it possible to have live coding session together. To sign up you only need a free Github account, which you can create in a matter of seconds.</p>
 </div>
-<div id="api" class="section level2 hasAnchor">
-<h2><span class="header-section-number">3.2</span> API<a href="tools.html#api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this semester project you will also need to learn about APIs. But what exactly is an API? An API (Application Programming Interface) allows different devices to connect to each other and send, update and request data from one to the other. You can think of it as a waiter in a restaurant. The waiter takes and understands your order, delivers it to the kitchen and comes back with the requested order. APIs function in a similar way.</p>
-<div id="how-do-we-get-the-data" class="section level3 unnumbered hasAnchor">
-<h3>How do we get the data?<a href="tools.html#how-do-we-get-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Every API is unique but if you understand how to obtain output from one API you will know how to get data from all.
-For the most part, APIs are accessed through URLs, and the specifics of how to query these URLs change based on the specific service you are using. For example, the <a href="https://openweathermap.org/api">OpenWeatherMap API</a>, that we will be using in our project, has several types of data that you can request. To get the current weather in London, type in the following URL into your browser.</p>
-<pre><code>api.openweathermap.org/data/2.5/weather?q=London</code></pre>
-<p>You will get an error message, prompting you to use an API key. Go ahead and <a href="https://home.openweathermap.org/users/sign_up">create an account</a> to obtain an API key from their free tier. Once the key has been activated, which can take up to 2 hours, try making a new request with the city of your choice AND the API key passed in as query string parameters, like the example above.</p>
-<pre><code>api.openweathermap.org/data/2.5/weather?q=London&amp;APPID=YOUR_API_KEY_HERE</code></pre>
-<p>Congrats, you have made your first API request!</p>
-<p>So how do we actually get the data from an API into our code?</p>
-<p>In JavaScript we use the <a href="https://developer.mozilla.org/de/docs/Web/API/Fetch_API">Fetch API</a> to make our API call. You will learn more about how to use it in section <a href="https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/22051352#overview">28</a> of the Udemy course which will also go over <a href="additional-resources.html#json">JSON</a>, the text format of the weather data.<br />
-To provide you with a template for later on and as a reminder, this is one way of how to deal with fetch:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="tools.html#cb15-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="at">exampleAPICall</span>() <span class="op">{</span></span>
-<span id="cb15-2"><a href="tools.html#cb15-2"></a>  <span class="cf">try</span> <span class="op">{</span></span>
-<span id="cb15-3"><a href="tools.html#cb15-3"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="at">fetch</span>(</span>
-<span id="cb15-4"><a href="tools.html#cb15-4"></a>      <span class="st">&quot;https://api.openweathermap.org/data/2.5/weather?q=London&amp;AAPID=YOUR_API_KEY_HERE&quot;</span></span>
-<span id="cb15-5"><a href="tools.html#cb15-5"></a>    )<span class="op">;</span></span>
-<span id="cb15-6"><a href="tools.html#cb15-6"></a>    <span class="kw">const</span> data <span class="op">=</span> <span class="cf">await</span> <span class="va">response</span>.<span class="at">json</span>()<span class="op">;</span></span>
-<span id="cb15-7"><a href="tools.html#cb15-7"></a>    <span class="co">/* your code here to work with the data */</span></span>
-<span id="cb15-8"><a href="tools.html#cb15-8"></a>  <span class="op">}</span> <span class="cf">catch</span> (error) <span class="op">{</span></span>
-<span id="cb15-9"><a href="tools.html#cb15-9"></a>    <span class="va">console</span>.<span class="at">log</span>(error)<span class="op">;</span></span>
-<span id="cb15-10"><a href="tools.html#cb15-10"></a>  <span class="op">}</span></span>
-<span id="cb15-11"><a href="tools.html#cb15-11"></a><span class="op">}</span></span></code></pre></div>
-</div>
-</div>
 <div id="udemy" class="section level2 hasAnchor">
-<h2><span class="header-section-number">3.3</span> Udemy<a href="tools.html#udemy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">3.2</span> Udemy<a href="tools.html#udemy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For this course you will be working with the <a href="https://www.udemy.com/course/the-web-developer-bootcamp/">The Web Development Bootcamp 2022</a> on Udemy.</p>
 <p>This course is filled with a ton of content. For our project we are only focusing on the front-end so you can naturally ignore (for now) the later half of the course, which exclusively deals with the back-end. We encourage you to do all the exercises you will encounter in between. You are going to learn a lot by doing the exercises and programming on your project will become far simpler.</p>
 <p>The following sections should leave you with enough knowledge to complete your project:</p>
@@ -351,7 +324,34 @@ To provide you with a template for later on and as a reminder, this is one way o
 </tr>
 </tbody>
 </table>
+</div>
+<div id="api" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.3</span> API<a href="tools.html#api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For this semester project you will also need to learn about APIs. But what exactly is an API? An API (Application Programming Interface) allows different devices to connect to each other and send, update and request data from one to the other. You can think of it as a waiter in a restaurant. The waiter takes and understands your order, delivers it to the kitchen and comes back with the requested order. APIs function in a similar way.</p>
+<div id="how-do-we-get-the-data" class="section level3 unnumbered hasAnchor">
+<h3>How do we get the data?<a href="tools.html#how-do-we-get-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Every API is unique but if you understand how to obtain output from one API you will know how to get data from all.
+For the most part, APIs are accessed through URLs, and the specifics of how to query these URLs change based on the specific service you are using. For example, the <a href="https://openweathermap.org/api">OpenWeatherMap API</a>, that we will be using in our project, has several types of data that you can request. To get the current weather in London, type in the following URL into your browser.</p>
+<pre><code>api.openweathermap.org/data/2.5/weather?q=London</code></pre>
+<p>You will get an error message, prompting you to use an API key. Go ahead and <a href="https://home.openweathermap.org/users/sign_up">create an account</a> to obtain an API key from their free tier. Once the key has been activated, which can take up to 2 hours, try making a new request with the city of your choice AND the API key passed in as query string parameters, like the example above.</p>
+<pre><code>api.openweathermap.org/data/2.5/weather?q=London&amp;APPID=YOUR_API_KEY_HERE</code></pre>
+<p>Congrats, you have made your first API request!</p>
+<p>So how do we actually get the data from an API into our code?</p>
+<p>In JavaScript we use the <a href="https://developer.mozilla.org/de/docs/Web/API/Fetch_API">Fetch API</a> to make our API call. You will learn more about how to use it in section <a href="https://www.udemy.com/course/the-web-developer-bootcamp/learn/lecture/22051352#overview">28</a> of the Udemy course which will also go over <a href="additional-resources.html#json">JSON</a>, the text format of the weather data.<br />
+To provide you with a template for later on and as a reminder, this is one way of how to deal with fetch:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="tools.html#cb15-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="at">exampleAPICall</span>() <span class="op">{</span></span>
+<span id="cb15-2"><a href="tools.html#cb15-2"></a>  <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb15-3"><a href="tools.html#cb15-3"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="at">fetch</span>(</span>
+<span id="cb15-4"><a href="tools.html#cb15-4"></a>      <span class="st">&quot;https://api.openweathermap.org/data/2.5/weather?q=London&amp;AAPID=YOUR_API_KEY_HERE&quot;</span></span>
+<span id="cb15-5"><a href="tools.html#cb15-5"></a>    )<span class="op">;</span></span>
+<span id="cb15-6"><a href="tools.html#cb15-6"></a>    <span class="kw">const</span> data <span class="op">=</span> <span class="cf">await</span> <span class="va">response</span>.<span class="at">json</span>()<span class="op">;</span></span>
+<span id="cb15-7"><a href="tools.html#cb15-7"></a>    <span class="co">/* your code here to work with the data */</span></span>
+<span id="cb15-8"><a href="tools.html#cb15-8"></a>  <span class="op">}</span> <span class="cf">catch</span> (error) <span class="op">{</span></span>
+<span id="cb15-9"><a href="tools.html#cb15-9"></a>    <span class="va">console</span>.<span class="at">log</span>(error)<span class="op">;</span></span>
+<span id="cb15-10"><a href="tools.html#cb15-10"></a>  <span class="op">}</span></span>
+<span id="cb15-11"><a href="tools.html#cb15-11"></a><span class="op">}</span></span></code></pre></div>
 
+</div>
 </div>
 </div>
             </section>
