@@ -69,6 +69,7 @@ By now, you should be done with all our recommended sections.
 2. Make this project your own! There are many additional features you can add. Here are some ideas:
 - Check out [Font Awesome][Font Awesome]
 - Toggle options between Celcius/Fahrenheit
+- Change background based on weather/time
 - Add a search history with the [Local storage API](https://developer.mozilla.org/de/docs/Web/API/Window/localStorage)
 - Ability to hide the forecast/search history with [keyframes](https://developer.mozilla.org/de/docs/Web/CSS/@keyframes)
 - When loading the page, display the weather for the user's location if he gives permission. Use the [Geolocation API](https://developer.mozilla.org/de/docs/Web/API/Geolocation_API)
