@@ -70,7 +70,7 @@ The CSS Syntax is as straight forward as it was the case with HTML. It is a rule
   
 <center>
 
-![](assets/css_example.png)
+![](docs/assets/css_example.png)
 
 </center>
   
@@ -117,14 +117,14 @@ CSS is based on the so-called box model: every element is a box. The content ins
   
 <center>
 
-![](assets/box-model.png)
+![](docs/assets/box-model.png)
 
 </center>
   
 This schematic can also be found in every modern web browser. Simply open your favorite website in a new window, right click and then select „inspect“. This will open the „developer tools“ and allow you to check out the content of a page. With these developer tools, you can also alter the content of a website directly in the browser! However beware, these changes will not be saved and a reload will get rid of them.  
   
   
-![](assets/ta-website.png)
+![](docs/assets/ta-website.png)
   
 ### Style.css {-}  
 
@@ -152,7 +152,7 @@ Let's dive in to JavaScript now! The JavaScript code that we will be writing dur
 
 <center>
 
-![](assets/console.png)
+![](docs/assets/console.png)
 
 </center>  
 
