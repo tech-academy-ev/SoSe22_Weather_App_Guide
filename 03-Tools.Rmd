@@ -34,7 +34,7 @@ The following sections should leave you with enough knowledge to complete your p
 
 | Section Name                              | Duration (h) |
 |-------------------------------------------|--------------|
-|1. Course Orientation                      | 0.5 |
+| 1. Course Orientation                     | 0.5 |
 | 2. An Introduction to Web Development     | 0.75 |
 | 3. HTML: The Essentials                   | 1 |
 | 4. HTML: Next Steps & Semantics           | 1 |
@@ -55,7 +55,6 @@ The following sections should leave you with enough knowledge to complete your p
 | 25. The Missing Piece: DOM Events         | 1.75 |
 | 27. Async JavaScript: Oh Boy!             | 1.5 |
 | 28. AJAX and APIs                         | 1.5 |
-| 29. Prototypes, Classes & OOP             | 1.5 |
   
 
 ## API

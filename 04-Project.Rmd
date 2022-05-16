@@ -40,7 +40,7 @@ You should have watched Section 1-5 by now. Optional: 6-8 and 10.
 ### 01.06.2022 - 2. Coding Meetup {-}
 
 #### Udemy Course {-}
-You should have watched Section 6-8 and 10 by now.
+You should have watched Section 6-8, 10 and 14-16 by now.
 
 #### Action {-}
 1. Now its time to apply your CSS knowledge. If you haven't already, add a style.css file and link it within the HTML document.
@@ -50,7 +50,7 @@ You should have watched Section 6-8 and 10 by now.
 ### 15.06.2022 - 3. Coding Meetup {-}
 
 #### Udemy Course {-}
-By now, you should be done with all our recommended sections. More specifically sections 14-19, 22, 24, 25 and 27-29.
+By now, you should be done with all our recommended sections. More specifically sections 17-20, 22, 24-25 and 27-28.
 
 #### Action {-}
 1. If you haven't already, go over the [API Section][API] now.

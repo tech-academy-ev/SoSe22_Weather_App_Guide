@@ -4,8 +4,8 @@
 %
 \documentclass[
 ]{article}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -82,7 +82,8 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -91,7 +92,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -116,6 +117,9 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
 
@@ -168,7 +172,7 @@ The structure of a html file is very simple. Almost all elements are just pieces
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{<title>}\NormalTok{Document}\KeywordTok{</title>}  
+\KeywordTok{\textless{}title\textgreater{}}\NormalTok{Document}\KeywordTok{\textless{}/title\textgreater{}}  
 \end{Highlighting}
 \end{Shaded}
 
@@ -190,10 +194,10 @@ To all of these tags you can add classes or id's. An id has to be unique. Why wo
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{<div}\OtherTok{ class=}\StringTok{"small-text"}\KeywordTok{>}
-  \KeywordTok{<p}\OtherTok{ id=}\StringTok{"first-line"}\KeywordTok{>}\NormalTok{Name}\KeywordTok{</p>}
-  \KeywordTok{<p}\OtherTok{ id=}\StringTok{"second-line"}\KeywordTok{>}\NormalTok{Tom}\KeywordTok{</p>}
-\KeywordTok{</div>}
+\KeywordTok{\textless{}div}\OtherTok{ class=}\StringTok{"small{-}text"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}p}\OtherTok{ id=}\StringTok{"first{-}line"}\KeywordTok{\textgreater{}}\NormalTok{Name}\KeywordTok{\textless{}/p\textgreater{}}
+  \KeywordTok{\textless{}p}\OtherTok{ id=}\StringTok{"second{-}line"}\KeywordTok{\textgreater{}}\NormalTok{Tom}\KeywordTok{\textless{}/p\textgreater{}}
+\KeywordTok{\textless{}/div\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -205,15 +209,15 @@ Now that you know the majority of the relevant tags the only question left to an
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DataTypeTok{<!DOCTYPE }\NormalTok{html}\DataTypeTok{>}
-\KeywordTok{<html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{>}
-  \KeywordTok{<head>}
-    \KeywordTok{<meta}\OtherTok{ charset=}\StringTok{"UTF-8"} \KeywordTok{/>}
-    \KeywordTok{<title>}\NormalTok{Document}\KeywordTok{</title>}
-  \KeywordTok{</head>}
-  \KeywordTok{<body>}
-  \KeywordTok{</body>}
-\KeywordTok{</html>}
+\DataTypeTok{\textless{}!DOCTYPE }\NormalTok{html}\DataTypeTok{\textgreater{}}
+\KeywordTok{\textless{}html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}head\textgreater{}}
+    \KeywordTok{\textless{}meta}\OtherTok{ charset=}\StringTok{"UTF{-}8"} \KeywordTok{/\textgreater{}}
+    \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Document}\KeywordTok{\textless{}/title\textgreater{}}
+  \KeywordTok{\textless{}/head\textgreater{}}
+  \KeywordTok{\textless{}body\textgreater{}}
+  \KeywordTok{\textless{}/body\textgreater{}}
+\KeywordTok{\textless{}/html\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -250,8 +254,8 @@ If you want to style multiple elements, that may be of different types, you use 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{.bold-text}\NormalTok{ \{                           }
-  \KeywordTok{font-weight}\NormalTok{: }\DecValTok{bold}
+\FunctionTok{.bold{-}text}\NormalTok{ \{                           }
+  \KeywordTok{font{-}weight}\NormalTok{: }\DecValTok{bold}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -260,8 +264,8 @@ If you only want to style one element, you use the hashtag-notation and add an i
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\PreprocessorTok{#header}\NormalTok{ \{                           }
-  \KeywordTok{font-size}\NormalTok{: }\DecValTok{x-large}\OperatorTok{;}
+\PreprocessorTok{\#header}\NormalTok{ \{                           }
+  \KeywordTok{font{-}size}\NormalTok{: }\DecValTok{x{-}large}\OperatorTok{;}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -318,15 +322,15 @@ Great, now you know alot about CSS, but how can we combine it with our HTML code
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DataTypeTok{<!DOCTYPE }\NormalTok{html}\DataTypeTok{>}
-\KeywordTok{<html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{>}
-  \KeywordTok{<head>}
-    \KeywordTok{<meta}\OtherTok{ charset=}\StringTok{"UTF-8"} \KeywordTok{/>}
-    \KeywordTok{<title>}\NormalTok{Document}\KeywordTok{</title>}
-    \KeywordTok{<link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/>}
-  \KeywordTok{</head>}
-  \KeywordTok{<body>}\NormalTok{...}\KeywordTok{</body>}
-\KeywordTok{</html>}
+\DataTypeTok{\textless{}!DOCTYPE }\NormalTok{html}\DataTypeTok{\textgreater{}}
+\KeywordTok{\textless{}html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}head\textgreater{}}
+    \KeywordTok{\textless{}meta}\OtherTok{ charset=}\StringTok{"UTF{-}8"} \KeywordTok{/\textgreater{}}
+    \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Document}\KeywordTok{\textless{}/title\textgreater{}}
+    \KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/\textgreater{}}
+  \KeywordTok{\textless{}/head\textgreater{}}
+  \KeywordTok{\textless{}body\textgreater{}}\NormalTok{...}\KeywordTok{\textless{}/body\textgreater{}}
+\KeywordTok{\textless{}/html\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -361,31 +365,31 @@ Let's go over some more code. Feel free to type along in your console.
 
 \CommentTok{/* Compound data types (arrays, objects) */}
 \KeywordTok{let}\NormalTok{ myArray }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\OperatorTok{,}\DecValTok{2}\OperatorTok{,}\DecValTok{3}\OperatorTok{,}\DecValTok{4}\OperatorTok{,}\DecValTok{5}\OperatorTok{,}\DecValTok{6}\OperatorTok{,}\DecValTok{7}\OperatorTok{,}\DecValTok{8}\OperatorTok{,}\DecValTok{9}\OperatorTok{,}\DecValTok{10}\NormalTok{]}\OperatorTok{;}                  \CommentTok{/* This is an array, consisting of 10 numbers, you can get the first entry like this: myArray[0] */}
-\KeywordTok{let}\NormalTok{ myObject }\OperatorTok{=} \OperatorTok{\{}\DataTypeTok{name}\OperatorTok{:} \StringTok{"Sebastian"}\OperatorTok{,} \DataTypeTok{position}\OperatorTok{:} \StringTok{"Tutor"}\OperatorTok{\};} \CommentTok{/* This is an object, to display the name you would type myObject.name */}
+\KeywordTok{let}\NormalTok{ myObject }\OperatorTok{=}\NormalTok{ \{}\DataTypeTok{name}\OperatorTok{:} \StringTok{"Sebastian"}\OperatorTok{,} \DataTypeTok{position}\OperatorTok{:} \StringTok{"Tutor"}\NormalTok{\}}\OperatorTok{;} \CommentTok{/* This is an object, to display the name you would type myObject.name */}
 
 \CommentTok{/* Console.log */}
-\VariableTok{console}\NormalTok{.}\AttributeTok{log}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* With console.log() we can print directly to the console. This is very handy to figure out if something's going wrong */}
+\BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{"Hello World!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* With console.log() we can print directly to the console. This is very handy to figure out if something\textquotesingle{}s going wrong */}
 
 \CommentTok{/* If statement */}
 \KeywordTok{let}\NormalTok{ grade }\OperatorTok{=} \FloatTok{1.7}\OperatorTok{;} \CommentTok{/* We declare a variable "grade" and store the value 1.7 in it */}
-\ControlFlowTok{if}\NormalTok{ (grade }\OperatorTok{<} \FloatTok{2.0}\NormalTok{) }\OperatorTok{\{} \CommentTok{/* Our code checks if grade is less than 2.0 */}
-  \VariableTok{console}\NormalTok{.}\AttributeTok{log}\NormalTok{(}\StringTok{"Wow, impressive!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* If that's the case 'Wow, impressive!' is the output in the console */}
-\OperatorTok{\}}
-\ControlFlowTok{else} \OperatorTok{\{}
-  \VariableTok{console}\NormalTok{.}\AttributeTok{log}\NormalTok{(}\StringTok{"Don't worry!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* If not, 'Dont't worry!' is the output */}
-\OperatorTok{\}}
+\ControlFlowTok{if}\NormalTok{ (grade }\OperatorTok{\textless{}} \FloatTok{2.0}\NormalTok{) \{ }\CommentTok{/* Our code checks if grade is less than 2.0 */}
+  \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{"Wow, impressive!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* If that\textquotesingle{}s the case \textquotesingle{}Wow, impressive!\textquotesingle{} is the output in the console */}
+\NormalTok{\}}
+\ControlFlowTok{else}\NormalTok{ \{}
+  \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(}\StringTok{"Don\textquotesingle{}t worry!"}\NormalTok{)}\OperatorTok{;} \CommentTok{/* If not, \textquotesingle{}Dont\textquotesingle{}t worry!\textquotesingle{} is the output */}
+\NormalTok{\}}
 
 \CommentTok{/* For loop */}
 \KeywordTok{let}\NormalTok{ myNumbers }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\OperatorTok{,}\DecValTok{2}\OperatorTok{,}\DecValTok{3}\OperatorTok{,}\DecValTok{4}\OperatorTok{,}\DecValTok{5}\NormalTok{]}\OperatorTok{;}
-\ControlFlowTok{for}\NormalTok{ (}\KeywordTok{let}\NormalTok{ number }\KeywordTok{of}\NormalTok{ myNumbers) }\OperatorTok{\{}
-  \VariableTok{console}\NormalTok{.}\AttributeTok{log}\NormalTok{(number)}\OperatorTok{;} \CommentTok{/* Every number of myNumbers will be printed in a seperate line */}
-\OperatorTok{\}}
+\ControlFlowTok{for}\NormalTok{ (}\KeywordTok{let}\NormalTok{ number }\KeywordTok{of}\NormalTok{ myNumbers) \{}
+  \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(number)}\OperatorTok{;} \CommentTok{/* Every number of myNumbers will be printed in a seperate line */}
+\NormalTok{\}}
 
 \CommentTok{/* While loop */}
 \KeywordTok{let}\NormalTok{ a }\OperatorTok{=} \DecValTok{90}\OperatorTok{;}
-\ControlFlowTok{while}\NormalTok{ (a }\OperatorTok{>=} \DecValTok{50}\NormalTok{) }\OperatorTok{\{}
-\NormalTok{  a }\OperatorTok{-=} \DecValTok{10}\OperatorTok{;}  \CommentTok{/* Our variable a will decrement by 10 as long as a is larger than 50 */}
-\OperatorTok{\}}
+\ControlFlowTok{while}\NormalTok{ (a }\OperatorTok{\textgreater{}=} \DecValTok{50}\NormalTok{) \{}
+\NormalTok{  a }\OperatorTok{{-}=} \DecValTok{10}\OperatorTok{;}  \CommentTok{/* Our variable a will decrement by 10 as long as a is larger than 50 */}
+\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -397,7 +401,7 @@ Now I bet you're asking how does this all link up to HTML and CSS? The DOM, or d
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{const}\NormalTok{ header }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{getElementById}\NormalTok{(}\StringTok{"header"}\NormalTok{)}\OperatorTok{;}
+\KeywordTok{const}\NormalTok{ header }\OperatorTok{=} \BuiltInTok{document}\OperatorTok{.}\FunctionTok{getElementById}\NormalTok{(}\StringTok{"header"}\NormalTok{)}\OperatorTok{;}
 \end{Highlighting}
 \end{Shaded}
 
@@ -405,10 +409,10 @@ add event listeners, that specify an action everytime the element is clicked on
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{const}\NormalTok{ button }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{getElementById}\NormalTok{(}\StringTok{"login-button"}\NormalTok{)}\OperatorTok{;}
-\VariableTok{button}\NormalTok{.}\AttributeTok{addEventListener}\NormalTok{(}\StringTok{"click"}\OperatorTok{,}\NormalTok{ () }\KeywordTok{=>} \OperatorTok{\{}
-  \CommentTok{/* check if the user's credentials were valid */}
-\OperatorTok{\}}\NormalTok{)}
+\KeywordTok{const}\NormalTok{ button }\OperatorTok{=} \BuiltInTok{document}\OperatorTok{.}\FunctionTok{getElementById}\NormalTok{(}\StringTok{"login{-}button"}\NormalTok{)}\OperatorTok{;}
+\NormalTok{button}\OperatorTok{.}\FunctionTok{addEventListener}\NormalTok{(}\StringTok{"click"}\OperatorTok{,}\NormalTok{ () }\KeywordTok{=\textgreater{}}\NormalTok{ \{}
+  \CommentTok{/* check if the user\textquotesingle{}s credentials were valid */}
+\NormalTok{\})}
 \end{Highlighting}
 \end{Shaded}
 
@@ -416,8 +420,8 @@ and even change the style of our elements dynamically!
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{const}\NormalTok{ button }\OperatorTok{=} \VariableTok{document}\NormalTok{.}\AttributeTok{getElementById}\NormalTok{(}\StringTok{"login-button"}\NormalTok{)}\OperatorTok{;}
-\VariableTok{button}\NormalTok{.}\VariableTok{style}\NormalTok{.}\AttributeTok{color} \OperatorTok{=} \StringTok{"red"}\OperatorTok{;}
+\KeywordTok{const}\NormalTok{ button }\OperatorTok{=} \BuiltInTok{document}\OperatorTok{.}\FunctionTok{getElementById}\NormalTok{(}\StringTok{"login{-}button"}\NormalTok{)}\OperatorTok{;}
+\NormalTok{button}\OperatorTok{.}\AttributeTok{style}\OperatorTok{.}\AttributeTok{color} \OperatorTok{=} \StringTok{"red"}\OperatorTok{;}
 \end{Highlighting}
 \end{Shaded}
 
@@ -429,18 +433,18 @@ Obviously it doesn't make sense to keep going in the browser as none of the code
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DataTypeTok{<!DOCTYPE }\NormalTok{html}\DataTypeTok{>}
-\KeywordTok{<html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{>}
-  \KeywordTok{<head>}
-    \KeywordTok{<meta}\OtherTok{ charset=}\StringTok{"UTF-8"} \KeywordTok{/>}
-    \KeywordTok{<title>}\NormalTok{Document}\KeywordTok{</title>}
-    \KeywordTok{<link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/>}
-  \KeywordTok{</head>}
-  \KeywordTok{<body>}
-    \CommentTok{<!-- All the HTML code comes before the script tag -->}
-    \KeywordTok{<script}\OtherTok{ src=}\StringTok{"script.js"}\KeywordTok{></script>}
-  \KeywordTok{</body>}
-\KeywordTok{</html>}
+\DataTypeTok{\textless{}!DOCTYPE }\NormalTok{html}\DataTypeTok{\textgreater{}}
+\KeywordTok{\textless{}html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}head\textgreater{}}
+    \KeywordTok{\textless{}meta}\OtherTok{ charset=}\StringTok{"UTF{-}8"} \KeywordTok{/\textgreater{}}
+    \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Document}\KeywordTok{\textless{}/title\textgreater{}}
+    \KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/\textgreater{}}
+  \KeywordTok{\textless{}/head\textgreater{}}
+  \KeywordTok{\textless{}body\textgreater{}}
+    \CommentTok{\textless{}!{-}{-} All the HTML code comes before the script tag {-}{-}\textgreater{}}
+    \KeywordTok{\textless{}script}\OtherTok{ src=}\StringTok{"script.js"}\KeywordTok{\textgreater{}\textless{}/script\textgreater{}}
+  \KeywordTok{\textless{}/body\textgreater{}}
+\KeywordTok{\textless{}/html\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -490,31 +494,30 @@ The following sections should leave you with enough knowledge to complete your p
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Section Name & Duration (h)\tabularnewline
+Section Name & Duration (h) \\
 \midrule
 \endhead
-1. Course Orientation & 0.5\tabularnewline
-2. An Introduction to Web Development & 0.75\tabularnewline
-3. HTML: The Essentials & 1\tabularnewline
-4. HTML: Next Steps \& Semantics & 1\tabularnewline
-5. HTML: Forms \& Tables & 1\tabularnewline
-6. CSS: The Very Basics & 1\tabularnewline
-7. CSS: The World of CSS Selectors & 1.25\tabularnewline
-8. The CSS Box Model & 1\tabularnewline
-10. Responsive CSS \& Flexbox & 1.25\tabularnewline
-14. JavaScript Basics! & 1\tabularnewline
-15. JavaScript String and More & 0.75\tabularnewline
-16. JavaScript Decision Making & 1.25\tabularnewline
-17. JavaScript Arrays & 1\tabularnewline
-18. JavaScript Object Literals & 0.5\tabularnewline
-19. JavaScript Repeating Stuff With Loops & 1.5\tabularnewline
-20. NEW: Introducing Functions & 0.5\tabularnewline
-22. Callbacks \& Array Methods & 1.5\tabularnewline
-24. Introducing The World Of The DOM & 1.75\tabularnewline
-25. The Missing Piece: DOM Events & 1.75\tabularnewline
-27. Async JavaScript: Oh Boy! & 1.5\tabularnewline
-28. AJAX and APIs & 1.5\tabularnewline
-29. Prototypes, Classes \& OOP & 1.5\tabularnewline
+1. Course Orientation & 0.5 \\
+2. An Introduction to Web Development & 0.75 \\
+3. HTML: The Essentials & 1 \\
+4. HTML: Next Steps \& Semantics & 1 \\
+5. HTML: Forms \& Tables & 1 \\
+6. CSS: The Very Basics & 1 \\
+7. CSS: The World of CSS Selectors & 1.25 \\
+8. The CSS Box Model & 1 \\
+10. Responsive CSS \& Flexbox & 1.25 \\
+14. JavaScript Basics! & 1 \\
+15. JavaScript String and More & 0.75 \\
+16. JavaScript Decision Making & 1.25 \\
+17. JavaScript Arrays & 1 \\
+18. JavaScript Object Literals & 0.5 \\
+19. JavaScript Repeating Stuff With Loops & 1.5 \\
+20. NEW: Introducing Functions & 0.5 \\
+22. Callbacks \& Array Methods & 1.5 \\
+24. Introducing The World Of The DOM & 1.75 \\
+25. The Missing Piece: DOM Events & 1.75 \\
+27. Async JavaScript: Oh Boy! & 1.5 \\
+28. AJAX and APIs & 1.5 \\
 \bottomrule
 \end{longtable}
 
@@ -549,17 +552,17 @@ To provide you with a template for later on and as a reminder, this is one way o
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{async} \KeywordTok{function} \AttributeTok{exampleAPICall}\NormalTok{() }\OperatorTok{\{}
-  \ControlFlowTok{try} \OperatorTok{\{}
-    \KeywordTok{const}\NormalTok{ response }\OperatorTok{=} \ControlFlowTok{await} \AttributeTok{fetch}\NormalTok{(}
-      \StringTok{"https://api.openweathermap.org/data/2.5/weather?q=London&AAPID=YOUR_API_KEY_HERE"}
+\KeywordTok{async} \KeywordTok{function} \FunctionTok{exampleAPICall}\NormalTok{() \{}
+  \ControlFlowTok{try}\NormalTok{ \{}
+    \KeywordTok{const}\NormalTok{ response }\OperatorTok{=} \ControlFlowTok{await} \FunctionTok{fetch}\NormalTok{(}
+      \StringTok{"https://api.openweathermap.org/data/2.5/weather?q=London\&AAPID=YOUR\_API\_KEY\_HERE"}
 \NormalTok{    )}\OperatorTok{;}
-    \KeywordTok{const}\NormalTok{ data }\OperatorTok{=} \ControlFlowTok{await} \VariableTok{response}\NormalTok{.}\AttributeTok{json}\NormalTok{()}\OperatorTok{;}
+    \KeywordTok{const}\NormalTok{ data }\OperatorTok{=} \ControlFlowTok{await}\NormalTok{ response}\OperatorTok{.}\FunctionTok{json}\NormalTok{()}\OperatorTok{;}
     \CommentTok{/* your code here to work with the data */}
-  \OperatorTok{\}} \ControlFlowTok{catch}\NormalTok{ (error) }\OperatorTok{\{}
-    \VariableTok{console}\NormalTok{.}\AttributeTok{log}\NormalTok{(error)}\OperatorTok{;}
-  \OperatorTok{\}}
-\OperatorTok{\}}
+\NormalTok{  \} }\ControlFlowTok{catch}\NormalTok{ (error) \{}
+    \BuiltInTok{console}\OperatorTok{.}\FunctionTok{log}\NormalTok{(error)}\OperatorTok{;}
+\NormalTok{  \}}
+\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -614,13 +617,13 @@ We will go over the basics of HTML and build your first website. Please remember
 \addcontentsline{toc}{subsubsection}{18.05.2022 - 1. Coding Meetup}
 
 \hypertarget{udemy-course}{%
-\paragraph{Udemy Course}\label{udemy-course}}
+\paragraph*{Udemy Course}\label{udemy-course}}
 \addcontentsline{toc}{paragraph}{Udemy Course}
 
 You should have watched Section 1-5 by now. Optional: 6-8 and 10.
 
 \hypertarget{action}{%
-\paragraph{Action}\label{action}}
+\paragraph*{Action}\label{action}}
 \addcontentsline{toc}{paragraph}{Action}
 
 \begin{enumerate}
@@ -641,13 +644,13 @@ You should have watched Section 1-5 by now. Optional: 6-8 and 10.
 \addcontentsline{toc}{subsubsection}{01.06.2022 - 2. Coding Meetup}
 
 \hypertarget{udemy-course-1}{%
-\paragraph{Udemy Course}\label{udemy-course-1}}
+\paragraph*{Udemy Course}\label{udemy-course-1}}
 \addcontentsline{toc}{paragraph}{Udemy Course}
 
-You should have watched Section 6-8 and 10 by now.
+You should have watched Section 6-8, 10 and 14-16 by now.
 
 \hypertarget{action-1}{%
-\paragraph{Action}\label{action-1}}
+\paragraph*{Action}\label{action-1}}
 \addcontentsline{toc}{paragraph}{Action}
 
 \begin{enumerate}
@@ -666,13 +669,13 @@ You should have watched Section 6-8 and 10 by now.
 \addcontentsline{toc}{subsubsection}{15.06.2022 - 3. Coding Meetup}
 
 \hypertarget{udemy-course-2}{%
-\paragraph{Udemy Course}\label{udemy-course-2}}
+\paragraph*{Udemy Course}\label{udemy-course-2}}
 \addcontentsline{toc}{paragraph}{Udemy Course}
 
-By now, you should be done with all our recommended sections. More specifically sections 14-19, 22, 24, 25 and 27-29.
+By now, you should be done with all our recommended sections. More specifically sections 17-20, 22, 24-25 and 27-28.
 
 \hypertarget{action-2}{%
-\paragraph{Action}\label{action-2}}
+\paragraph*{Action}\label{action-2}}
 \addcontentsline{toc}{paragraph}{Action}
 
 \begin{enumerate}
@@ -695,13 +698,13 @@ By now, you should be done with all our recommended sections. More specifically 
 \addcontentsline{toc}{subsubsection}{29.06.2022 - 4. Coding Meetup}
 
 \hypertarget{udemy-course-3}{%
-\paragraph{Udemy Course}\label{udemy-course-3}}
+\paragraph*{Udemy Course}\label{udemy-course-3}}
 \addcontentsline{toc}{paragraph}{Udemy Course}
 
 By now, you should be done with all our recommended sections.
 
 \hypertarget{action-3}{%
-\paragraph{Action}\label{action-3}}
+\paragraph*{Action}\label{action-3}}
 \addcontentsline{toc}{paragraph}{Action}
 
 \begin{enumerate}
@@ -762,7 +765,7 @@ JSON (JavaScript Object Notation) is a text format for storing and transporting 
     
       \FunctionTok{\{}
          \DataTypeTok{"id"}\FunctionTok{:}\StringTok{"02"}\FunctionTok{,}
-         \DataTypeTok{"title"}\FunctionTok{:} \StringTok{"JavaScript &JQuery"}\FunctionTok{,}
+         \DataTypeTok{"title"}\FunctionTok{:} \StringTok{"JavaScript \&JQuery"}\FunctionTok{,}
          \DataTypeTok{"edition"}\FunctionTok{:} \DecValTok{2}\FunctionTok{,}
          \DataTypeTok{"author"}\FunctionTok{:} \StringTok{"Jon Duckett"}\FunctionTok{,}
          \DataTypeTok{"read"}\FunctionTok{:} \KeywordTok{false}\FunctionTok{,}
@@ -777,8 +780,8 @@ To extract the information stored in the JSON data, we can access the values muc
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{let}\NormalTok{ firstId }\OperatorTok{=} \VariableTok{data}\NormalTok{.}\AttributeTok{book}\NormalTok{[}\DecValTok{0}\NormalTok{].}\AttributeTok{id} \CommentTok{/*This would yield 01 */}
-\KeywordTok{let}\NormalTok{ jsAuthor }\OperatorTok{=} \VariableTok{data}\NormalTok{.}\AttributeTok{book}\NormalTok{[}\DecValTok{1}\NormalTok{].}\AttributeTok{author} \CommentTok{/* This would result in John Duckett */}  
+\KeywordTok{let}\NormalTok{ firstId }\OperatorTok{=}\NormalTok{ data}\OperatorTok{.}\AttributeTok{book}\NormalTok{[}\DecValTok{0}\NormalTok{]}\OperatorTok{.}\AttributeTok{id} \CommentTok{/*This would yield 01 */}
+\KeywordTok{let}\NormalTok{ jsAuthor }\OperatorTok{=}\NormalTok{ data}\OperatorTok{.}\AttributeTok{book}\NormalTok{[}\DecValTok{1}\NormalTok{]}\OperatorTok{.}\AttributeTok{author} \CommentTok{/* This would result in John Duckett */}  
 \end{Highlighting}
 \end{Shaded}
 
@@ -792,23 +795,24 @@ There's just one more quick thing to do before you can use them in your project,
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DataTypeTok{<!DOCTYPE }\NormalTok{html}\DataTypeTok{>}
-\KeywordTok{<html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{>}
-  \KeywordTok{<head>}
-    \KeywordTok{<meta}\OtherTok{ charset=}\StringTok{"UTF-8"} \KeywordTok{/>}
-    \KeywordTok{<title>}\NormalTok{Document}\KeywordTok{</title>}
-    \KeywordTok{<link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/>}
-    \KeywordTok{<script}
-\OtherTok{      src=}\StringTok{"https://kit.fontawesome.com/YOUR_CODE.js"}
+\DataTypeTok{\textless{}!DOCTYPE }\NormalTok{html}\DataTypeTok{\textgreater{}}
+\KeywordTok{\textless{}html}\OtherTok{ lang=}\StringTok{"en"}\KeywordTok{\textgreater{}}
+  \KeywordTok{\textless{}head\textgreater{}}
+    \KeywordTok{\textless{}meta}\OtherTok{ charset=}\StringTok{"UTF{-}8"} \KeywordTok{/\textgreater{}}
+    \KeywordTok{\textless{}title\textgreater{}}\NormalTok{Document}\KeywordTok{\textless{}/title\textgreater{}}
+    \KeywordTok{\textless{}link}\OtherTok{ rel=}\StringTok{"stylesheet"}\OtherTok{ href=}\StringTok{"style.css"} \KeywordTok{/\textgreater{}}
+    \KeywordTok{\textless{}script}
+\OtherTok{      src=}\StringTok{"https://kit.fontawesome.com/YOUR\_CODE.js"}
 \OtherTok{      crossorigin=}\StringTok{"anonymous"}
-    \KeywordTok{></script>}
-  \KeywordTok{</head>}
-  \KeywordTok{<body>}
-    \CommentTok{<!-- All the HTML code comes before the script tag -->}
-    \KeywordTok{<script}\OtherTok{ src=}\StringTok{"script.js"}\KeywordTok{></script>}
-  \KeywordTok{</body>}
-\KeywordTok{</html>}
+    \KeywordTok{\textgreater{}\textless{}/script\textgreater{}}
+  \KeywordTok{\textless{}/head\textgreater{}}
+  \KeywordTok{\textless{}body\textgreater{}}
+    \CommentTok{\textless{}!{-}{-} All the HTML code comes before the script tag {-}{-}\textgreater{}}
+    \KeywordTok{\textless{}script}\OtherTok{ src=}\StringTok{"script.js"}\KeywordTok{\textgreater{}\textless{}/script\textgreater{}}
+  \KeywordTok{\textless{}/body\textgreater{}}
+\KeywordTok{\textless{}/html\textgreater{}}
 \end{Highlighting}
 \end{Shaded}
+
 
 \end{document}
